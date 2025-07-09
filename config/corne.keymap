@@ -187,9 +187,9 @@
 
         mac_figure_layer {
             bindings = <
-&kp ESCAPE              &kp W           &kp L           &kp H               &kp G                &kp K             &kp FSLH     &kp U               &kp O            &kp Y      &kp B  &kp Z
-&mt GLOBE TAB           &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp P             &kp MINUS    &kp E               &kp A            &kp I      &kp C  &kp Q
-&mt LEFT_CONTROL GRAVE  &my_mt LG(Z) V  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp J             &bspc_del    &kp EQUAL           &comma_lpar      &dot_rpar  &kp F  &kp SEMI
+&kp ESCAPE              &kp W           &kp L           &kp H               &kp G                &kp K             &kp FSLH     &kp U               &kp O            &kp Y      &kp B  &kp Q
+&mt GLOBE TAB           &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp P             &kp MINUS    &kp E               &kp A            &kp I      &kp C  &kp SEMICOLON
+&mt LEFT_CONTROL GRAVE  &my_mt LG(Z) V  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp J             &bspc_del    &kp EQUAL           &comma_lpar      &dot_rpar  &kp F  &kp Z
                                                         &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 1 SPACE  &lt 2 SINGLE_QUOTE  &lt 3 BACKSLASH
             >;
 
