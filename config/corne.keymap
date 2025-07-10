@@ -202,7 +202,7 @@
             bindings = <
 &kp ESCAPE              &kp V           &kp L           &kp H               &kp G                &kp K             &kp FSLH     &kp U               &kp O        &kp Y      &kp B  &kp Q
 &mt GLOBE TAB           &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp P             &kp MINUS    &kp E               &kp A        &kp I      &kp C  &kp SEMICOLON
-&mt LEFT_CONTROL GRAVE  &my_mt LG(Z) W  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp J             &bspc_del    &kp EQUAL           &comma_lpar  &dot_rpar  &kp F  &kp Z
+&mt LEFT_CONTROL GRAVE  &my_mt LG(Z) W  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp J             &kp EQUAL    &bspc_del           &comma_lpar  &dot_rpar  &kp F  &kp Z
                                                         &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 3 SPACE  &lt 4 SINGLE_QUOTE  &lt 5 ENTER
             >;
 
