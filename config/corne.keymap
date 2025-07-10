@@ -108,7 +108,7 @@
 
         screenshot {
             bindings = <&kp LS(LG(NUMBER_4))>;
-            key-positions = <2 1>;
+            key-positions = <2 3>;
             layers = <2>;
         };
 
@@ -174,7 +174,7 @@
 
         mission_ctrl {
             bindings = <&mission_ctrl_macro>;
-            key-positions = <2 3>;
+            key-positions = <2 1>;
             layers = <2>;
         };
     };
@@ -227,11 +227,11 @@
                                &trans          &trans           &trans            &trans              &trans        &trans
             >;
 
-            label = "NAV";
+            label = "Navigation";
         };
 
         num_sym_layer {
-            label = "NUM_SYM";
+            label = "NUMBERS_SYMBOLS";
             bindings = <
 &kp GRAVE    &kp DOLLAR  &kp HASH      &kp AT     &kp EXCLAMATION  &none                   &none                  &kp N5  &kp N6  &kp N7   &kp N8        &none
 &kp PERCENT  &kp SLASH   &kp ASTERISK  &kp MINUS  &kp PLUS         &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N1  &kp N2  &kp N3   &kp NUMBER_4  &none
@@ -248,7 +248,7 @@
                                             &trans        &trans        &trans             &trans  &trans  &trans
             >;
 
-            label = "FN_SETT";
+            label = "F-KEYS_BT";
         };
     };
 
