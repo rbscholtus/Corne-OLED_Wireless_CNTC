@@ -165,9 +165,9 @@
         focal_layer {
             label = "Focal";
             bindings = <
-&kp ESCAPE              &kp V           &kp L           &kp H               &kp G                &kp K             &my_mt Q MINUS  &kp F               &kp O        &kp U    &kp J     &kp BSLH
-&mt GLOBE TAB           &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp B             &kp Y           &kp C               &kp A        &kp E    &kp I     &kp SEMICOLON
-&mt LEFT_CONTROL GRAVE  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp P             &bspc_del       &kp W               &kp COMMA    &kp DOT  &kp FSLH  &kp EQUAL
+&kp ESCAPE              &kp V           &kp L           &kp H               &kp G                &kp K             &my_mt Q MINUS  &kp F               &kp O        &kp U      &kp J     &kp BSLH
+&mt GLOBE TAB           &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp B             &kp Y           &kp C               &kp A        &kp E      &kp I     &kp SEMICOLON
+&mt LEFT_CONTROL GRAVE  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp P             &bspc_del       &kp W               &comma_lpar  &dot_rpar  &kp FSLH  &kp EQUAL
                                                         &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 4 SPACE     &lt 5 SINGLE_QUOTE  &lt 6 ENTER
             >;
         };
