@@ -236,12 +236,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        FN_settings {
-            if-layers = <4 5>;
-            then-layer = <6>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
