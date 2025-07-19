@@ -51,7 +51,7 @@
         comma_lpar: comma_lpar {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_LPAR";
-            bindings = <&kp COMMA>, <&mt LESS_THAN LPAR>;
+            bindings = <&mt LESS_THAN COMMA>, <&mt LESS_THAN LPAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -61,7 +61,7 @@
         dot_rpar: dot_rpar {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_RPAR";
-            bindings = <&kp DOT>, <&mt GREATER_THAN RPAR>;
+            bindings = <&mt GREATER_THAN DOT>, <&mt GREATER_THAN RPAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
