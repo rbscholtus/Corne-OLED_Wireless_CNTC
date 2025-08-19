@@ -103,43 +103,43 @@
         spotlight {
             bindings = <&kp LG(SPACE)>;
             key-positions = <3 4>;
-            layers = <4>;
+            layers = <6>;
         };
 
         screenshot {
             bindings = <&kp LS(LG(NUMBER_4))>;
             key-positions = <2 3>;
-            layers = <4>;
+            layers = <6>;
         };
 
         play_pause {
             bindings = <&kp C_PLAY_PAUSE>;
             key-positions = <6 7>;
-            layers = <4>;
+            layers = <6>;
         };
 
         mute {
             bindings = <&kp K_MUTE>;
             key-positions = <7 8>;
-            layers = <4>;
+            layers = <6>;
         };
 
         volume_decrease {
             bindings = <&kp C_VOLUME_DOWN>;
             key-positions = <8 9>;
-            layers = <4>;
+            layers = <6>;
         };
 
         volume_increase {
             bindings = <&kp C_VOLUME_UP>;
             key-positions = <9 10>;
-            layers = <4>;
+            layers = <6>;
         };
 
         mission_ctrl {
             bindings = <&mission_ctrl_macro>;
             key-positions = <2 1>;
-            layers = <4>;
+            layers = <6>;
         };
     };
 
@@ -168,7 +168,7 @@
 &kp ESCAPE                  &kp V           &kp L           &kp H               &kp G                &kp K             &kp Q        &kp F               &kp O        &kp U      &kp J     &kp MINUS
 &mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp B             &kp Y        &kp C               &kp A        &kp E      &kp I     &kp SEMICOLON
 &mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp P             &bspc_del    &kp W               &comma_lpar  &dot_rpar  &kp FSLH  &kp EQUAL
-                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 4 SPACE  &lt 5 SINGLE_QUOTE  &lt 6 ENTER
+                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 6 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
@@ -178,29 +178,39 @@
 &kp ESCAPE                  &kp W           &kp L           &kp H               &kp K                &kp Q             &kp EQUAL    &kp O               &kp U        &kp Y      &kp Z  &kp MINUS
 &mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp F             &kp SEMI     &kp A               &kp E        &kp I      &kp C  &kp P
 &mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp B             &bspc_del    &comma_lpar         &kp FSLH     &dot_rpar  &kp G  &kp J
-                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 4 SPACE  &lt 5 SINGLE_QUOTE  &lt 6 ENTER
+                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 6 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
         serene_layer {
             label = "Serene";
             bindings = <
-&kp ESCAPE              &kp P           &kp L           &kp C               &kp D                &kp K             &kp EQUAL    &kp O      &kp U        &kp Y      &kp B  &kp Z
-&mt GLOBE TAB           &my_mt LG(A) N  &kp R           &kp S               &kp T                &kp M             &kp MINUS    &kp A      &kp E        &kp I      &kp H  &kp X
-&mt LEFT_CONTROL GRAVE  &my_mt LG(Z) J  &my_mt LG(X) W  &my_mt LG(C) F      &my_mt LG(V) G       &kp V             &kp SLASH    &bspc_del  &comma_lpar  &dot_rpar  &kp Q  &kp SEMI
-                                                        &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 4 SPACE  &lt 5 SQT  &lt 6 ENTER
+&kp ESCAPE                  &kp P           &kp L           &kp C               &kp D                &kp K             &kp EQUAL    &kp O      &kp U        &kp Y      &kp B  &kp Z
+&mt GLOBE TAB               &my_mt LG(A) N  &kp R           &kp S               &kp T                &kp M             &kp MINUS    &kp A      &kp E        &kp I      &kp H  &kp X
+&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) J  &my_mt LG(X) W  &my_mt LG(C) F      &my_mt LG(V) G       &kp V             &kp SLASH    &bspc_del  &comma_lpar  &dot_rpar  &kp Q  &kp SEMI
+                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 6 SPACE  &lt 6 SQT  &lt 7 ENTER
             >;
         };
 
         figure_layer {
             bindings = <
-&kp ESCAPE              &kp V           &kp L           &kp H               &kp G                &kp K             &kp FSLH     &kp U               &kp O        &kp Y      &kp B  &kp Q
-&mt GLOBE TAB           &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp P             &kp MINUS    &kp E               &kp A        &kp I      &kp C  &kp SEMICOLON
-&mt LEFT_CONTROL GRAVE  &my_mt LG(Z) W  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp J             &kp EQUAL    &bspc_del           &comma_lpar  &dot_rpar  &kp F  &kp Z
-                                                        &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 4 SPACE  &lt 5 SINGLE_QUOTE  &lt 6 ENTER
+&kp ESCAPE                  &kp V           &kp L           &kp H               &kp G                &kp K             &kp FSLH     &kp U               &kp O        &kp Y      &kp B  &kp Q
+&mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp P             &kp MINUS    &kp E               &kp A        &kp I      &kp C  &kp SEMICOLON
+&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) W  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp J             &kp EQUAL    &bspc_del           &comma_lpar  &dot_rpar  &kp F  &kp Z
+                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 6 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
 
             label = "Figure";
+        };
+
+        qwtry {
+            label = "Qwtry";
+            bindings = <
+&kp ESCAPE                  &kp Q  &kp W  &kp T               &kp R                &kp Y             &kp BSPC     &kp U               &kp E        &kp O      &kp P     &kp MINUS
+&mt GLOBE TAB               &kp A  &kp S  &kp D               &kp F                &kp G             &kp H        &kp J               &kp K        &kp L      &kp I     &kp SEMI
+&mt LEFT_CONTROL BACKSLASH  &kp Z  &kp X  &kp C               &kp V                &kp B             &kp N        &kp M               &comma_lpar  &dot_rpar  &kp FSLH  &kp EQUAL
+                                          &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 6 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+            >;
         };
 
         navigation_layer {
@@ -226,7 +236,7 @@
 
         fn_settings_layer {
             bindings = <
-&to 0           &to 2         &to 3         &to 0         &none         &rgb_ug RGB_ON     &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
+&to 0           &to 1         &to 2         &to 3         &to 4         &rgb_ug RGB_ON     &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
 &none           &out OUT_BLE  &out OUT_USB  &none         &none         &rgb_ug RGB_OFF    &none   &kp F1  &kp F2   &kp F3   &kp F4   &none
 &bt BT_CLR_ALL  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0       &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
                                             &trans        &trans        &trans             &trans  &trans  &trans
