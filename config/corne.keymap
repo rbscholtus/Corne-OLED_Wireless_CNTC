@@ -168,7 +168,7 @@
 &kp ESCAPE                  &kp V           &kp L           &kp H               &kp G                &kp K             &kp Q        &kp F               &kp O        &kp U      &kp J     &kp MINUS
 &mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp B             &kp Y        &kp C               &kp A        &kp E      &kp I     &kp SEMICOLON
 &mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp P             &bspc_del    &kp W               &comma_lpar  &dot_rpar  &kp FSLH  &kp EQUAL
-                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 6 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
@@ -178,7 +178,7 @@
 &kp ESCAPE                  &kp W           &kp L           &kp H               &kp K                &kp Q             &kp EQUAL    &kp O               &kp U        &kp Y      &kp Z  &kp MINUS
 &mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp F             &kp SEMI     &kp A               &kp E        &kp I      &kp C  &kp P
 &mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp B             &bspc_del    &comma_lpar         &kp FSLH     &dot_rpar  &kp G  &kp J
-                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 6 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
@@ -188,7 +188,7 @@
 &kp ESCAPE                  &kp P           &kp L           &kp C               &kp D                &kp K             &kp EQUAL    &kp O      &kp U        &kp Y      &kp B  &kp Z
 &mt GLOBE TAB               &my_mt LG(A) N  &kp R           &kp S               &kp T                &kp M             &kp MINUS    &kp A      &kp E        &kp I      &kp H  &kp X
 &mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) J  &my_mt LG(X) W  &my_mt LG(C) F      &my_mt LG(V) G       &kp V             &kp SLASH    &bspc_del  &comma_lpar  &dot_rpar  &kp Q  &kp SEMI
-                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 6 SPACE  &lt 6 SQT  &lt 7 ENTER
+                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SQT  &lt 7 ENTER
             >;
         };
 
@@ -197,7 +197,7 @@
 &kp ESCAPE                  &kp V           &kp L           &kp H               &kp G                &kp K             &kp FSLH     &kp U               &kp O        &kp Y      &kp B  &kp Q
 &mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp P             &kp MINUS    &kp E               &kp A        &kp I      &kp C  &kp SEMICOLON
 &mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) W  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp J             &kp EQUAL    &bspc_del           &comma_lpar  &dot_rpar  &kp F  &kp Z
-                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 6 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
 
             label = "Figure";
@@ -209,7 +209,7 @@
 &kp ESCAPE                  &kp Q  &kp W  &kp T               &kp R                &kp Y             &kp BSPC     &kp U               &kp E        &kp O      &kp P     &kp MINUS
 &mt GLOBE TAB               &kp A  &kp S  &kp D               &kp F                &kp G             &kp H        &kp J               &kp K        &kp L      &kp I     &kp SEMI
 &mt LEFT_CONTROL BACKSLASH  &kp Z  &kp X  &kp C               &kp V                &kp B             &kp N        &kp M               &comma_lpar  &dot_rpar  &kp FSLH  &kp EQUAL
-                                          &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 6 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+                                          &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
