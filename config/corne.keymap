@@ -172,12 +172,12 @@
             >;
         };
 
-        focal-mod3 {
-            label = "Focal-Mod3";
+        focal-mod3b {
+            label = "Focal-Mod3b";
             bindings = <
-&kp ESCAPE                  &kp W           &kp L           &kp H               &kp K                &kp Q             &kp EQUAL    &kp O               &kp U        &kp Y      &kp Z  &kp MINUS
-&mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp F             &kp SEMI     &kp A               &kp E        &kp I      &kp C  &kp P
-&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) V  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp B             &bspc_del    &comma_lpar         &kp FSLH     &dot_rpar  &kp G  &kp J
+&kp ESCAPE                  &kp W           &kp L           &kp H               &kp K                &kp Q             &kp EQUAL    &kp U               &kp O        &kp Y      &kp Z  &kp MINUS
+&mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp F             &kp SEMI     &kp E               &kp A        &kp I      &kp C  &kp P
+&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) V  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp B             &kp SLASH    &bspc_del           &comma_lpar  &dot_rpar  &kp G  &kp J
                                                             &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
