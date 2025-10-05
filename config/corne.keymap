@@ -235,7 +235,7 @@
             bindings = <
 &trans  &none      &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_DOWN    &kp PAGE_UP    &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)  &kp LG(UP_ARROW)    &none
 &trans  &kp LG(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(DOWN_ARROW)  &none
-&trans  &kp LG(Z)  &kp LG(X)       &kp LG(C)       &kp LG(V)        &none             &none          &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
+&trans  &kp LG(Z)  &kp LG(X)       &kp LG(C)       &kp LG(V)        &none             &bspc_del      &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
                                    &trans          &trans           &kp LS(S)         &trans         &trans        &trans
             >;
 
