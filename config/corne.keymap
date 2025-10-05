@@ -203,10 +203,10 @@
         northeast_layer {
             label = "NorthEast";
             bindings = <
-&kp ESCAPE        &kp B  &kp L  &kp M             &kp W                        &kp G               &kp Q          &kp U               &kp O        &kp Y      &kp J  &kp BSLH
-&mt GLOBE TAB     &kp N  &kp R  &kp T             &kp P                        &kp F               &kp SEMICOLON  &kp E               &kp A        &kp I      &kp H  &dot_rpar
-&kp LEFT_CONTROL  &kp X  &kp Z  &kp V             &kp C                        &kp D               &bspc_del      &kp EQUAL           &comma_lpar  &kp MINUS  &kp K  &kp SLASH
-                                &mt LEFT_ALT DEL  &gui_sk LEFT_GUI LEFT_SHIFT  &mt LEFT_SHIFT S    &lt 5 SPACE    &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+&kp ESCAPE        &kp B  &kp L  &kp M             &kp W       &kp G         &kp Q        &kp U               &kp O        &kp Y      &kp J  &kp BSLH
+&mt GLOBE TAB     &kp N  &kp R  &kp T             &kp P       &kp F         &kp MINUS    &kp E               &kp A        &kp I      &kp H  &kp SEMI
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp V             &kp C       &kp D         &bspc_del    &kp EQUAL           &comma_lpar  &dot_rpar  &kp K  &kp SLASH
+                                &mt LEFT_ALT DEL  &sk LSHIFT  &mt LGUI S    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
@@ -255,9 +255,9 @@
         num_sym_layer {
             label = "Nums_Syms";
             bindings = <
-&kp GRAVE            &kp DOLLAR  &kp HASH      &kp AT     &kp EXCLAMATION  &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp N5  &kp N6  &kp N7    &kp N8        &bspc_del
-&kp PERCENT          &kp SLASH   &kp ASTERISK  &kp MINUS  &kp PLUS         &kp LEFT_BRACE          &kp RIGHT_BRACE    &kp N1  &kp N2  &kp N3    &kp NUMBER_4  &kp DOT
-&mt LCTRL BACKSLASH  &kp TILDE   &kp CARET     &kp PIPE   &kp AMPERSAND    &kp LESS_THAN           &kp GREATER_THAN   &kp N9  &kp N0  &kp LPAR  &kp RPAR      &kp EQUAL
+&kp GRAVE            &kp DOLLAR  &kp HASH      &kp AT     &kp EXCLAMATION  &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp N5  &kp N6       &kp N7     &kp N8        &bspc_del
+&kp PERCENT          &kp SLASH   &kp ASTERISK  &kp MINUS  &kp PLUS         &kp LEFT_BRACE          &kp RIGHT_BRACE    &kp N1  &kp N2       &kp N3     &kp NUMBER_4  &kp DOT
+&mt LCTRL BACKSLASH  &kp TILDE   &kp CARET     &kp PIPE   &kp AMPERSAND    &kp LESS_THAN           &kp GREATER_THAN   &kp N9  &comma_lpar  &dot_rpar  &kp NUMBER_0  &kp EQUAL
                                                &trans     &trans           &mt LEFT_SHIFT SPACE    &trans             &trans  &trans
             >;
         };
