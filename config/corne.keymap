@@ -48,9 +48,9 @@
             flavor = "tap-preferred";
         };
 
-        comma_lpar: comma_lpar {
+        comma_lpar_lt: comma_lpar_lt {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_LPAR";
+            label = "COMMA_LPAR_LT";
             bindings = <&my_mt LESS_THAN COMMA>, <&my_mt LESS_THAN LPAR>;
 
             #binding-cells = <0>;
@@ -58,9 +58,9 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        dot_rpar: dot_rpar {
+        dot_rpar_gt: dot_rpar_gt {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_RPAR";
+            label = "DOT_RPAR_GT";
             bindings = <&my_mt GREATER_THAN DOT>, <&my_mt GREATER_THAN RPAR>;
 
             #binding-cells = <0>;
@@ -84,6 +84,24 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        comma_lpar: comma_lpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_LPAR";
+            bindings = <&kp COMMA>, <&kp LPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot_rpar: dot_rpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_RPAR";
+            bindings = <&kp PERIOD>, <&kp RPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -165,38 +183,38 @@
         focal_layer {
             label = "Focal";
             bindings = <
-&kp ESCAPE                  &kp V           &kp L           &kp H               &kp G                &kp K             &kp Q        &kp F               &kp O        &kp U      &kp J     &kp MINUS
-&mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp B             &kp Y        &kp C               &kp A        &kp E      &kp I     &kp SEMICOLON
-&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp P             &bspc_del    &kp W               &comma_lpar  &dot_rpar  &kp FSLH  &kp EQUAL
+&kp ESCAPE                  &kp V           &kp L           &kp H               &kp G                &kp K             &kp Q        &kp F               &kp O           &kp U         &kp J     &kp MINUS
+&mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp B             &kp Y        &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
+&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp P             &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
                                                             &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
-        focal-mod3b {
-            label = "Focal-Mod3b";
+        northeast_layer {
+            label = "NorthEast";
             bindings = <
-&kp ESCAPE                  &kp W           &kp L           &kp H               &kp K                &kp Q             &kp EQUAL    &kp U               &kp O        &kp Y      &kp Z  &kp MINUS
-&mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp F             &kp SEMI     &kp E               &kp A        &kp I      &kp C  &kp P
-&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) V  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp B             &kp SLASH    &bspc_del           &comma_lpar  &dot_rpar  &kp G  &kp J
-                                                            &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+&kp ESCAPE        &kp B  &kp L  &kp M               &kp W                &kp G                  &kp Q          &kp O               &kp U        &kp Y      &kp J  &kp BSLH
+&mt GLOBE TAB     &kp N  &kp R  &kp T               &kp P                &kp F                  &kp SEMICOLON  &kp A               &kp E        &kp I      &kp H  &dot_rpar
+&kp LEFT_CONTROL  &kp X  &kp Z  &kp V               &kp C                &kp D                  &bspc_del      &comma_lpar         &kp EQUAL    &kp MINUS  &kp K  &kp SLASH
+                                &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &my_mt LEFT_SHIFT S    &lt 5 SPACE    &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
         serene_layer {
             label = "Serene";
             bindings = <
-&kp ESCAPE                  &kp P           &kp L           &kp C               &kp D                &kp K             &kp EQUAL    &kp O      &kp U        &kp Y      &kp B  &kp Z
-&mt GLOBE TAB               &my_mt LG(A) N  &kp R           &kp S               &kp T                &kp M             &kp MINUS    &kp A      &kp E        &kp I      &kp H  &kp X
-&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) J  &my_mt LG(X) W  &my_mt LG(C) F      &my_mt LG(V) G       &kp V             &kp SLASH    &bspc_del  &comma_lpar  &dot_rpar  &kp Q  &kp SEMI
+&kp ESCAPE                  &kp P           &kp L           &kp C               &kp D                &kp K             &kp EQUAL    &kp O      &kp U           &kp Y         &kp B  &kp Z
+&mt GLOBE TAB               &my_mt LG(A) N  &kp R           &kp S               &kp T                &kp M             &kp MINUS    &kp A      &kp E           &kp I         &kp H  &kp X
+&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) J  &my_mt LG(X) W  &my_mt LG(C) F      &my_mt LG(V) G       &kp V             &kp SLASH    &bspc_del  &comma_lpar_lt  &dot_rpar_gt  &kp Q  &kp SEMI
                                                             &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SQT  &lt 7 ENTER
             >;
         };
 
         figure_layer {
             bindings = <
-&kp ESCAPE                  &kp V           &kp L           &kp H               &kp G                &kp K             &kp FSLH     &kp U               &kp O        &kp Y      &kp B  &kp Q
-&mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp P             &kp MINUS    &kp E               &kp A        &kp I      &kp C  &kp SEMICOLON
-&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) W  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp J             &kp EQUAL    &bspc_del           &comma_lpar  &dot_rpar  &kp F  &kp Z
+&kp ESCAPE                  &kp V           &kp L           &kp H               &kp G                &kp K             &kp FSLH     &kp U               &kp O           &kp Y         &kp B  &kp Q
+&mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T                &kp P             &kp MINUS    &kp E               &kp A           &kp I         &kp C  &kp SEMICOLON
+&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) W  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D       &kp J             &kp EQUAL    &bspc_del           &comma_lpar_lt  &dot_rpar_gt  &kp F  &kp Z
                                                             &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
 
@@ -206,19 +224,19 @@
         qwtry {
             label = "Qwtry";
             bindings = <
-&kp ESCAPE                  &kp Q  &kp W  &kp T               &kp R                &kp Y             &kp BSPC     &kp U               &kp E        &kp O      &kp P     &kp MINUS
-&mt GLOBE TAB               &kp A  &kp S  &kp D               &kp F                &kp G             &kp H        &kp J               &kp K        &kp L      &kp I     &kp SEMI
-&mt LEFT_CONTROL BACKSLASH  &kp Z  &kp X  &kp C               &kp V                &kp B             &kp N        &kp M               &comma_lpar  &dot_rpar  &kp FSLH  &kp EQUAL
+&kp ESCAPE                  &kp Q  &kp W  &kp T               &kp R                &kp Y             &kp BSPC     &kp U               &kp E           &kp O         &kp P     &kp MINUS
+&mt GLOBE TAB               &kp A  &kp S  &kp D               &kp F                &kp G             &kp H        &kp J               &kp K           &kp L         &kp I     &kp SEMI
+&mt LEFT_CONTROL BACKSLASH  &kp Z  &kp X  &kp C               &kp V                &kp B             &kp N        &kp M               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
                                           &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &sk LEFT_SHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
         navigation_layer {
             bindings = <
-&trans  &none  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_DOWN    &kp PAGE_UP    &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)  &kp LG(UP_ARROW)    &none
-&trans  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(DOWN_ARROW)  &none
-&trans  &none  &none           &none           &none            &none             &bspc_del      &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
-                               &trans          &trans           &trans            &trans         &trans        &trans
+&trans  &none      &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_DOWN    &kp PAGE_UP    &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)  &kp LG(UP_ARROW)    &none
+&trans  &kp LG(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(DOWN_ARROW)  &none
+&trans  &kp LG(Z)  &kp LG(X)       &kp LG(C)       &kp LG(V)        &none             &none          &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
+                                   &trans          &trans           &kp LS(S)         &trans         &trans        &trans
             >;
 
             label = "Navigate";
@@ -227,9 +245,9 @@
         num_sym_layer {
             label = "Nums_Syms";
             bindings = <
-&kp GRAVE            &kp DOLLAR  &kp HASH      &kp AT     &kp EXCLAMATION  &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp N5  &kp N6  &kp N7     &kp N8        &kp MINUS
-&kp PERCENT          &kp SLASH   &kp ASTERISK  &kp MINUS  &kp PLUS         &kp LEFT_BRACE          &kp RIGHT_BRACE    &kp N1  &kp N2  &kp N3     &kp NUMBER_4  &kp SEMICOLON
-&mt LCTRL BACKSLASH  &kp TILDE   &kp CARET     &kp PIPE   &kp AMPERSAND    &none                   &bspc_del          &kp N9  &kp N0  &kp COMMA  &kp PERIOD    &kp EQUAL
+&kp GRAVE            &kp DOLLAR  &kp HASH      &kp AT     &kp EXCLAMATION  &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp N5  &kp N6  &kp N7    &kp N8        &bspc_del
+&kp PERCENT          &kp SLASH   &kp ASTERISK  &kp MINUS  &kp PLUS         &kp LEFT_BRACE          &kp RIGHT_BRACE    &kp N1  &kp N2  &kp N3    &kp NUMBER_4  &kp DOT
+&mt LCTRL BACKSLASH  &kp TILDE   &kp CARET     &kp PIPE   &kp AMPERSAND    &kp LESS_THAN           &kp GREATER_THAN   &kp N9  &kp N0  &kp LPAR  &kp RPAR      &kp EQUAL
                                                &trans     &trans           &mt LEFT_SHIFT SPACE    &trans             &trans  &trans
             >;
         };
