@@ -103,6 +103,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        gui_sk: gui_sk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GUI_SK";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -193,10 +203,10 @@
         northeast_layer {
             label = "NorthEast";
             bindings = <
-&kp ESCAPE        &kp B  &kp L  &kp M               &kp W                &kp G               &kp Q          &kp U               &kp O        &kp Y      &kp J  &kp BSLH
-&mt GLOBE TAB     &kp N  &kp R  &kp T               &kp P                &kp F               &kp SEMICOLON  &kp E               &kp A        &kp I      &kp H  &dot_rpar
-&kp LEFT_CONTROL  &kp X  &kp Z  &kp V               &kp C                &kp D               &bspc_del      &kp EQUAL           &comma_lpar  &kp MINUS  &kp K  &kp SLASH
-                                &mt LEFT_ALT ENTER  &mt LEFT_GUI DELETE  &mt LEFT_SHIFT S    &lt 5 SPACE    &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+&kp ESCAPE        &kp B  &kp L  &kp M             &kp W                        &kp G               &kp Q          &kp U               &kp O        &kp Y      &kp J  &kp BSLH
+&mt GLOBE TAB     &kp N  &kp R  &kp T             &kp P                        &kp F               &kp SEMICOLON  &kp E               &kp A        &kp I      &kp H  &dot_rpar
+&kp LEFT_CONTROL  &kp X  &kp Z  &kp V             &kp C                        &kp D               &bspc_del      &kp EQUAL           &comma_lpar  &kp MINUS  &kp K  &kp SLASH
+                                &mt LEFT_ALT DEL  &gui_sk LEFT_GUI LEFT_SHIFT  &mt LEFT_SHIFT S    &lt 5 SPACE    &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
