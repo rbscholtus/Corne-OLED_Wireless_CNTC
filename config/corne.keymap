@@ -200,13 +200,13 @@
             >;
         };
 
-        northeast_layer {
-            label = "NorthEast";
+        northwest_layer {
+            label = "NorthWest";
             bindings = <
-&kp ESCAPE        &kp B  &kp L  &kp M             &kp W       &kp G         &kp Q        &kp U               &kp O        &kp Y      &kp J  &kp BSLH
-&mt GLOBE TAB     &kp N  &kp R  &kp T             &kp P       &kp F         &kp MINUS    &kp E               &kp A        &kp I      &kp H  &kp SEMI
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp V             &kp C       &kp D         &bspc_del    &kp EQUAL           &comma_lpar  &dot_rpar  &kp K  &kp SLASH
-                                &mt LEFT_ALT DEL  &sk LSHIFT  &mt LGUI S    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+&kp ESCAPE       &kp B  &kp L  &kp M             &kp P       &kp W         &kp SLASH    &kp U               &kp O        &kp Y      &kp Q  &kp BSLH
+&mt GLOBE TAB    &kp N  &kp R  &kp T             &kp D       &kp F         &kp EQUAL    &kp E               &kp A        &kp I      &kp H  &kp SEMI
+&mt LCTRL GRAVE  &kp Z  &kp X  &kp V             &kp C       &kp G         &bspc_del    &kp MINUS           &comma_lpar  &dot_rpar  &kp K  &kp J
+                               &mt LEFT_ALT DEL  &sk LSHIFT  &mt LGUI S    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
