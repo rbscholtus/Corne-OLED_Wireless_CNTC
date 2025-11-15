@@ -203,18 +203,18 @@
         northwest_layer {
             label = "NorthWest";
             bindings = <
-&kp ESCAPE           &kp B  &kp L  &kp M             &kp P       &kp W         &kp SLASH    &kp U               &kp O        &kp Y      &kp Q  &kp GRAVE
-&mt GLOBE TAB        &kp N  &kp R  &kp T             &kp D       &kp F         &kp EQUAL    &kp E               &kp A        &kp I      &kp H  &kp SEMI
-&mt LCTRL BACKSLASH  &kp Z  &kp X  &kp V             &kp C       &kp G         &bspc_del    &kp MINUS           &comma_lpar  &dot_rpar  &kp K  &kp J
-                                   &mt LEFT_ALT DEL  &sk LSHIFT  &mt LGUI S    &lt 6 SPACE  &lt 7 SINGLE_QUOTE  &lt 8 ENTER
+&kp ESCAPE           &kp B  &kp L  &kp M             &kp P       &kp W             &kp SLASH  &kp U               &kp O        &kp Y      &kp Q  &kp GRAVE
+&mt GLOBE TAB        &kp N  &kp R  &kp T             &kp D       &kp F             &kp EQUAL  &kp E               &kp A        &kp I      &kp H  &kp SEMI
+&mt LCTRL BACKSLASH  &kp Z  &kp X  &kp V             &kp C       &kp G             &bspc_del  &kp MINUS           &comma_lpar  &dot_rpar  &kp K  &kp J
+                                   &mt LEFT_ALT DEL  &sk LSHIFT  &mt LGUI SPACE    &lt 6 S    &lt 7 SINGLE_QUOTE  &lt 8 ENTER
             >;
         };
 
         nightfever_layer {
             label = "NightFever";
             bindings = <
-&kp ESCAPE           &kp X  &kp F  &kp L             &kp K       &kp Z         &kp Q        &kp Y               &kp O        &kp U     &kp DOT    &kp GRAVE
-&mt GLOBE TAB        &kp N  &kp S  &kp H             &kp T       &kp D         &kp G        &kp C               &kp A        &kp E     &kp I      &kp MINUS
+&kp ESCAPE           &kp X  &kp F  &kp L             &kp K       &kp Z         &kp Q        &kp Y               &kp O        &kp U     &kp MINUS  &kp GRAVE
+&mt GLOBE TAB        &kp N  &kp S  &kp H             &kp T       &kp D         &kp G        &kp C               &kp A        &kp E     &kp I      &kp PERIOD
 &mt LCTRL BACKSLASH  &kp B  &kp V  &kp M             &kp P       &kp J         &bspc_del    &kp W               &kp SEMI     &kp FSLH  &kp COMMA  &kp EQUAL
                                    &mt LEFT_ALT DEL  &sk LSHIFT  &mt LGUI R    &lt 6 SPACE  &lt 7 SINGLE_QUOTE  &lt 8 ENTER
             >;
