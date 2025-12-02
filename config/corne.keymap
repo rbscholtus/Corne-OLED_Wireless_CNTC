@@ -31,7 +31,10 @@
     };
 };
 
-&sk { quick-release; };
+&sk {
+    quick-release;
+    release-after-ms = <800>;
+};
 
 / {
     behaviors {
