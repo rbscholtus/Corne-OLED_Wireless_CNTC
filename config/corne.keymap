@@ -205,20 +205,20 @@
         focal_layer {
             label = "Focal";
             bindings = <
-&kp ESCAPE                  &kp V           &kp L           &kp H                &kp G           &kp K             &kp Q      &kp F               &kp O           &kp U         &kp J     &kp MINUS
-&mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N                &kp T           &kp B             &kp Y      &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
-&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M       &my_mt LG(V) D  &kp P             &bspc_del  &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
-                                                            &mt LEFT_ALT DELETE  &sk LSHFT       &mt LGUI SPACE    &mo 2      &lt 4 SINGLE_QUOTE  &lt 5 ENTER
+&kp ESCAPE                  &kp V           &kp L           &kp H               &kp G            &kp K         &kp Q        &kp F               &kp O           &kp U         &kp J     &kp MINUS
+&mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T            &kp B         &kp Y        &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
+&mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D   &kp P         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
+                                                            &mt LEFT_ALT ENTER  &mt LGUI DELETE  &sk LSHIFT    &lt 2 SPACE  &lt 4 SINGLE_QUOTE  &lt 5 ENTER
             >;
         };
 
         focal_layer_win {
             label = "Focal Win";
             bindings = <
-&kp ESCAPE              &kp V           &kp L           &kp H                &kp G           &kp K              &kp Q      &kp F               &kp O           &kp U         &kp J     &kp MINUS
-&kp TAB                 &my_mt LC(A) S  &kp R           &kp N                &kp T           &kp B              &kp Y      &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
-&mt LEFT_WIN BACKSLASH  &my_mt LC(Z) Z  &my_mt LC(X) X  &my_mt LC(C) M       &my_mt LC(V) D  &kp P              &bspc_del  &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
-                                                        &mt LEFT_ALT DELETE  &sk LSHIFT      &mt LCTRL SPACE    &mo 3      &lt 4 SINGLE_QUOTE  &lt 5 ENTER
+&kp ESCAPE              &kp V           &kp L           &kp H               &kp G             &kp K         &kp Q        &kp F               &kp O           &kp U         &kp J     &kp MINUS
+&kp TAB                 &my_mt LC(A) S  &kp R           &kp N               &kp T             &kp B         &kp Y        &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
+&mt LEFT_WIN BACKSLASH  &my_mt LC(Z) Z  &my_mt LC(X) X  &my_mt LC(C) M      &my_mt LC(V) D    &kp P         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
+                                                        &mt LEFT_ALT ENTER  &mt LCTRL DELETE  &sk LSHIFT    &lt 3 SPACE  &lt 4 SINGLE_QUOTE  &lt 5 ENTER
             >;
         };
 
@@ -248,7 +248,7 @@
             bindings = <
 &kp GRAVE    &kp DOLLAR  &kp HASH      &kp AT     &kp EXCLAMATION  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N5  &kp N6          &kp N7        &kp N8        &trans
 &kp PERCENT  &kp SLASH   &kp ASTERISK  &kp MINUS  &kp PLUS         &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp N1  &kp N2          &kp N3        &kp NUMBER_4  &trans
-&trans       &kp TILDE   &kp CARET     &kp PIPE   &kp AMPERSAND    &none               &bspc_del          &kp N9  &comma_lpar_lt  &dot_rpar_gt  &kp NUMBER_0  &trans
+&trans       &kp TILDE   &kp CARET     &kp PIPE   &kp AMPERSAND    &kp SPACE           &bspc_del          &kp N9  &comma_lpar_lt  &dot_rpar_gt  &kp NUMBER_0  &trans
                                        &trans     &trans           &trans              &trans             &trans  &trans
             >;
         };
