@@ -265,8 +265,8 @@
         num_sym_layer {
             label = "Nums_Syms";
             bindings = <
-&trans               &kp DOLLAR  &kp HASH      &kp AT     &kp EXCLAMATION  &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp N5  &kp N6       &kp N7     &kp N8        &kp GRAVE
-&kp PERCENT          &kp SLASH   &kp ASTERISK  &kp MINUS  &kp PLUS         &kp LEFT_BRACE          &kp RIGHT_BRACE    &kp N1  &kp N2       &kp N3     &kp NUMBER_4  &kp DOT
+&kp GRAVE            &kp DOLLAR  &kp HASH      &kp AT     &kp EXCLAMATION  &kp LEFT_BRACKET        &kp RIGHT_BRACKET  &kp N5  &kp N6       &kp N7     &kp N8        &none
+&kp PERCENT          &kp SLASH   &kp ASTERISK  &kp MINUS  &kp PLUS         &kp LEFT_BRACE          &kp RIGHT_BRACE    &kp N1  &kp N2       &kp N3     &kp NUMBER_4  &none
 &mt LCTRL BACKSLASH  &kp TILDE   &kp CARET     &kp PIPE   &kp AMPERSAND    &kp LESS_THAN           &kp GREATER_THAN   &kp N9  &comma_lpar  &dot_rpar  &kp NUMBER_0  &kp EQUAL
                                                &trans     &trans           &mt LEFT_SHIFT SPACE    &trans             &trans  &trans
             >;
