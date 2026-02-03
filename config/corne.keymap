@@ -215,9 +215,9 @@
         aenthics_layer {
             label = "Aenthics";
             bindings = <
-&kp ESCAPE              &kp X           &kp P           &kp G                &kp M           &kp J         &kp EQUAL    &kp U               &kp O        &kp Y      &kp COMMA  &kp BACKSLASH
-&mt GLOBE TAB           &my_mt LG(A) S  &kp N           &kp T                &kp H           &kp K         &kp MINUS    &kp E               &kp A        &kp I      &kp C      &kp DOT
-&mt LEFT_CONTROL GRAVE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) D       &my_mt LG(V) L  &kp V         &bspc_del    &kp Z               &kp Q        &kp SLASH  &kp W      &kp SEMI
+&kp ESCAPE              &kp X           &kp P           &kp G                &kp M           &kp J         &kp EQUAL    &kp U               &kp O        &kp Y  &kp COMMA  &kp BACKSLASH
+&mt GLOBE TAB           &my_mt LG(A) S  &kp N           &kp T                &kp H           &kp K         &kp MINUS    &kp E               &kp A        &kp I  &kp C      &kp DOT
+&mt LEFT_CONTROL GRAVE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) D       &my_mt LG(V) L  &kp V         &bspc_del    &kp Z               &kp SLASH    &kp Q  &kp W      &kp SEMI
                                                         &mt LEFT_ALT DELETE  &sk LSHIFT      &mt LGUI R    &lt 3 SPACE  &lt 5 SINGLE_QUOTE  &lt 6 ENTER
             >;
         };
