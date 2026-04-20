@@ -43,6 +43,7 @@
             label = "MY_MT";
             #binding-cells = <2>;
             bindings = <&my_kp_macro>, <&kp>;
+
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
@@ -52,6 +53,7 @@
             label = "THUMB_HOLD_TAP";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             tapping-term-ms = <333>;
             flavor = "tap-preferred";
         };
@@ -233,20 +235,20 @@
         snth_layer {
             label = "SNTH";
             bindings = <
-&kp ESCAPE              &kp X           &kp P           &kp D                &kp M                   &kp Q              &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
-&mt GLOBE TAB           &my_mt LG(A) S  &kp N           &kp T                &kp H                   &kp V              &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
-&mt LEFT_CONTROL ENTER  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K       &my_mt LG(V) L          &kp J              &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                        &mt LEFT_ALT DELETE  &thumb_hold_tap LCMD R  &sk LSHIFT          &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+&kp ESCAPE               &kp X           &kp P           &kp D               &kp M                   &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
+&mt GLOBE TAB            &my_mt LG(A) S  &kp N           &kp T               &kp H                   &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
+&mt LEFT_CONTROL DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K      &my_mt LG(V) L          &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
+                                                         &mt LEFT_ALT ENTER  &thumb_hold_tap LCMD R  &sk LSHIFT    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
             >;
         };
 
         snth_layer_win {
             label = "SNTH Win";
             bindings = <
-&kp ESCAPE      &kp X           &kp P           &kp D                &kp M                    &kp Q             &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
-&kp TAB         &my_mt LC(A) S  &kp N           &kp T                &kp H                    &kp V             &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
-&mt LWIN ENTER  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K       &my_mt LC(V) L           &kp J             &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                &mt LEFT_ALT DELETE  &thumb_hold_tap LCTRL R  &sk LSHIFT        &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+&kp ESCAPE       &kp X           &kp P           &kp D               &kp M                    &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
+&kp TAB          &my_mt LC(A) S  &kp N           &kp T               &kp H                    &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
+&mt LWIN DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K      &my_mt LC(V) L           &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
+                                                 &mt LEFT_ALT ENTER  &thumb_hold_tap LCTRL R  &sk LSHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
             >;
         };
 
