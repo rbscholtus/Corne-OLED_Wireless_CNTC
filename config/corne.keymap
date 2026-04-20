@@ -113,6 +113,15 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
         };
+
+        bal_hold_tap: bal_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BAL_HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     combos {
@@ -131,55 +140,55 @@
         spotlight {
             bindings = <&kp LG(SPACE)>;
             key-positions = <3 4>;
-            layers = <3>;
+            layers = <4>;
         };
 
         screenshot {
             bindings = <&kp LS(LG(NUMBER_4))>;
             key-positions = <2 3>;
-            layers = <3>;
+            layers = <4>;
         };
 
         play_pause {
             bindings = <&kp C_PLAY_PAUSE>;
             key-positions = <6 7>;
-            layers = <3 4>;
+            layers = <4 5>;
         };
 
         mute {
             bindings = <&kp K_MUTE>;
             key-positions = <7 8>;
-            layers = <3 4>;
+            layers = <4 5>;
         };
 
         volume_decrease {
             bindings = <&kp C_VOLUME_DOWN>;
             key-positions = <8 9>;
-            layers = <3 4>;
+            layers = <4 5>;
         };
 
         volume_increase {
             bindings = <&kp C_VOLUME_UP>;
             key-positions = <9 10>;
-            layers = <3 4>;
+            layers = <4 5>;
         };
 
         mission_ctrl {
             bindings = <&mission_ctrl_macro>;
             key-positions = <2 1>;
-            layers = <3>;
+            layers = <4>;
         };
 
         Snip_tool {
             bindings = <&kp LS(LG(S))>;
             key-positions = <2 3>;
-            layers = <4>;
+            layers = <5>;
         };
 
         start_menu {
             bindings = <&kp LGUI>;
             key-positions = <3 4>;
-            layers = <4>;
+            layers = <5>;
         };
     };
 
@@ -208,17 +217,7 @@
 &kp ESCAPE                  &kp V           &kp L           &kp H               &kp G            &kp K         &kp Q        &kp F               &kp O           &kp U         &kp J     &kp MINUS
 &mt GLOBE TAB               &my_mt LG(A) S  &kp R           &kp N               &kp T            &kp B         &kp Y        &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
 &mt LEFT_CONTROL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D   &kp P         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
-                                                            &mt LEFT_ALT ENTER  &mt LGUI DELETE  &sk LSHIFT    &lt 3 SPACE  &lt 5 SINGLE_QUOTE  &lt 6 ENTER
-            >;
-        };
-
-        snth_layer {
-            label = "snth";
-            bindings = <
-&kp ESCAPE              &kp X           &kp P           &kp D                &kp M           &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
-&mt GLOBE TAB           &my_mt LG(A) S  &kp N           &kp T                &kp H           &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
-&mt LEFT_CONTROL ENTER  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K       &my_mt LG(V) L  &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                        &mt LEFT_ALT DELETE  &sk LSHIFT      &mt LGUI R    &lt 3 SPACE  &lt 5 SINGLE_QUOTE  &lt 6 ENTER
+                                                            &mt LEFT_ALT ENTER  &mt LGUI DELETE  &sk LSHIFT    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
@@ -228,7 +227,27 @@
 &kp ESCAPE              &kp V           &kp L           &kp H               &kp G             &kp K         &kp Q        &kp F               &kp O           &kp U         &kp J     &kp MINUS
 &kp TAB                 &my_mt LC(A) S  &kp R           &kp N               &kp T             &kp B         &kp Y        &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
 &mt LEFT_WIN BACKSLASH  &my_mt LC(Z) Z  &my_mt LC(X) X  &my_mt LC(C) M      &my_mt LC(V) D    &kp P         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
-                                                        &mt LEFT_ALT ENTER  &mt LCTRL DELETE  &sk LSHIFT    &lt 4 SPACE  &lt 5 SINGLE_QUOTE  &lt 6 ENTER
+                                                        &mt LEFT_ALT ENTER  &mt LCTRL DELETE  &sk LSHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+            >;
+        };
+
+        snth_layer {
+            label = "SNTH";
+            bindings = <
+&kp ESCAPE              &kp X           &kp P           &kp D                &kp M           &kp Q                   &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
+&mt GLOBE TAB           &my_mt LG(A) S  &kp N           &kp T                &kp H           &kp V                   &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
+&mt LEFT_CONTROL ENTER  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K       &my_mt LG(V) L  &kp J                   &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
+                                                        &mt LEFT_ALT DELETE  &sk LSHIFT      &bal_hold_tap LCMD R    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+            >;
+        };
+
+        snth_layer_win {
+            label = "SNTH Win";
+            bindings = <
+&kp ESCAPE      &kp X           &kp P           &kp D                &kp M           &kp Q                    &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
+&kp TAB         &my_mt LC(A) S  &kp N           &kp T                &kp H           &kp V                    &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
+&mt LWIN ENTER  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K       &my_mt LC(V) L  &kp J                    &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
+                                                &mt LEFT_ALT DELETE  &sk LSHIFT      &bal_hold_tap LCTRL R    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
@@ -265,7 +284,7 @@
 
         fn_settings_layer {
             bindings = <
-&to 0           &to 1         &to 2         &none         &none           &none              &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
+&to 0           &to 1         &to 2         &to 3         &none           &none              &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
 &none           &out OUT_BLE  &out OUT_USB  &none         &rgb_ug RGB_ON  &rgb_ug RGB_OFF    &none   &kp F1  &kp F2   &kp F3   &kp F4   &none
 &bt BT_CLR_ALL  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1    &bt BT_SEL 0       &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
                                             &trans        &trans          &trans             &trans  &trans  &trans
