@@ -247,7 +247,7 @@
 &kp ESCAPE      &kp X           &kp P           &kp D                &kp M           &kp Q                    &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
 &kp TAB         &my_mt LC(A) S  &kp N           &kp T                &kp H           &kp V                    &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
 &mt LWIN ENTER  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K       &my_mt LC(V) L  &kp J                    &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                &mt LEFT_ALT DELETE  &sk LSHIFT      &bal_hold_tap LCTRL R    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+                                                &mt LEFT_ALT DELETE  &sk LSHIFT      &bal_hold_tap LCTRL R    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
         };
 
