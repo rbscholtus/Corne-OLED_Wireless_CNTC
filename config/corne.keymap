@@ -48,6 +48,16 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
         };
 
+        pht2: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+        };
+		
         my_mt: my_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MY_MT";
@@ -58,32 +68,14 @@
             flavor = "tap-preferred";
         };
 
-        thumb_mt: thumb_hold_tap {
+        thumb_hold_tap: thumb_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "THUMB_MT";
+            label = "THUMB_HOLD_TAP";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <333>;
             flavor = "tap-preferred";
-        };
-
-        comma_lpar: comma_lpar {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_LPAR";
-            bindings = <&kp COMMA>, <&kp LPAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        dot_rpar: dot_rpar {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_RPAR";
-            bindings = <&kp PERIOD>, <&kp RPAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         comma_lpar_lt: comma_lpar_lt {
@@ -123,6 +115,34 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+
+        comma_lpar: comma_lpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_LPAR";
+            bindings = <&kp COMMA>, <&kp LPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot_rpar: dot_rpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_RPAR";
+            bindings = <&kp PERIOD>, <&kp RPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        gui_sk: gui_sk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GUI_SK";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -138,9 +158,9 @@
             key-positions = <25 26 27>;
         };
 
-        mission_ctrl {
-            bindings = <&mission_ctrl_macro>;
-            key-positions = <1 2>;
+        spotlight {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <3 4>;
             layers = <4>;
         };
 
@@ -148,24 +168,6 @@
             bindings = <&kp LS(LG(NUMBER_4))>;
             key-positions = <2 3>;
             layers = <4>;
-        };
-
-        spotlight {
-            bindings = <&kp LG(SPACE)>;
-            key-positions = <3 4>;
-            layers = <4>;
-        };
-
-        snip_tool {
-            bindings = <&kp LS(LG(S))>;
-            key-positions = <2 3>;
-            layers = <5>;
-        };
-
-        start_menu {
-            bindings = <&kp LGUI>;
-            key-positions = <3 4>;
-            layers = <5>;
         };
 
         play_pause {
@@ -190,6 +192,24 @@
             bindings = <&kp C_VOLUME_UP>;
             key-positions = <9 10>;
             layers = <4 5>;
+        };
+
+        mission_ctrl {
+            bindings = <&mission_ctrl_macro>;
+            key-positions = <2 1>;
+            layers = <4>;
+        };
+
+        Snip_tool {
+            bindings = <&kp LS(LG(S))>;
+            key-positions = <2 3>;
+            layers = <5>;
+        };
+
+        start_menu {
+            bindings = <&kp LGUI>;
+            key-positions = <3 4>;
+            layers = <5>;
         };
     };
 
@@ -235,29 +255,29 @@
         snth_layer {
             label = "SNTH";
             bindings = <
-&kp ESCAPE               &kp X           &kp P           &kp D               &kp M           &kp Q               &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
-&mt GLOBE TAB            &my_mt LG(A) S  &kp N           &kp T               &kp H           &kp V               &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
-&mt LEFT_CONTROL DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K      &my_mt LG(V) L  &kp J               &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                         &mt LEFT_ALT ENTER  &sk LSHIFT      &thumb_mt LCMD R    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
+&kp ESCAPE               &kp X           &kp P           &kp D               &kp M                   &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
+&mt GLOBE TAB            &my_mt LG(A) S  &kp N           &kp T               &kp H                   &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
+&mt LEFT_CONTROL DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K      &my_mt LG(V) L          &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
+                                                         &mt LEFT_ALT ENTER  &thumb_hold_tap LCMD R  &sk LSHIFT    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
             >;
         };
 
         snth_layer_win {
             label = "SNTH Win";
             bindings = <
-&kp ESCAPE       &kp X           &kp P           &kp D               &kp M           &kp Q                &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
-&kp TAB          &my_mt LC(A) S  &kp N           &kp T               &pht LEFT_SHIFT H           &kp V                &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
-&mt LWIN DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K      &my_mt LC(V) L  &kp J                &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                 &mt LEFT_ALT ENTER  &sk LSHIFT      &thumb_mt LCTRL R    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
+&kp ESCAPE       &kp X           &kp P           &kp D               &kp M                    &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
+&kp TAB          &my_mt LC(A) S  &kp N           &kp T               &kp H                    &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
+&mt LWIN DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K      &my_mt LC(V) L           &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
+                                                 &mt LEFT_ALT ENTER  &thumb_hold_tap LCTRL R  &sk LSHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
             >;
         };
 
         navigation_layer {
             bindings = <
-&trans  &none  &mkp MB1        &mmv MOVE_UP    &mkp MB2               &msc SCRL_DOWN          &kp PAGE_UP    &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)  &kp LG(UP_ARROW)    &none
-&trans  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT        &msc SCRL_UP            &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(DOWN_ARROW)  &none
-&trans  &none  &none           &none           &none                  &none                   &bspc_del      &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
-                               &trans          &trans  &thumb_mt LCMD LG(R)    &trans         &trans        &trans
+&trans  &none      &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_DOWN    &kp PAGE_UP    &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)  &kp LG(UP_ARROW)    &none
+&trans  &kp LG(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(DOWN_ARROW)  &none
+&trans  &kp LG(Z)  &kp LG(X)       &kp LG(C)       &kp LG(V)        &none             &bspc_del      &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
+                                   &trans          &trans           &trans            &trans         &trans        &trans
             >;
 
             label = "Navigate";
@@ -266,10 +286,10 @@
         navigation_layer_win {
             label = "Navig Win";
             bindings = <
-&trans  &none  &mkp MB1        &mmv MOVE_UP    &mkp MB2               &msc SCRL_DOWN           &kp PAGE_UP    &kp LC(LEFT)  &kp UP_ARROW  &kp LC(RIGHT)  &kp LC(HOME)  &none
-&trans  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT        &msc SCRL_UP             &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LC(END)   &none
-&trans  &none  &none           &none           &none                  &none                    &bspc_del      &kp HOME      &none         &kp END        &none         &none
-                               &trans          &trans  &thumb_mt LCTRL LC(R)    &trans         &trans        &trans
+&trans  &none      &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_DOWN    &kp PAGE_UP    &kp LC(LEFT)  &kp UP_ARROW  &kp LC(RIGHT)  &kp LC(HOME)  &none
+&trans  &kp LC(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LC(END)   &none
+&trans  &kp LC(Z)  &kp LC(X)       &kp LC(C)       &kp LC(V)        &none             &bspc_del      &kp HOME      &none         &kp END        &none         &none
+                                   &trans          &trans           &trans            &trans         &trans        &trans
             >;
         };
 
@@ -279,7 +299,7 @@
 &kp GRAVE    &kp DOLLAR  &kp HASH   &kp AT     &kp EXCLAMATION  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N5  &kp N6          &kp N7        &kp N8        &trans
 &kp PERCENT  &kp MINUS   &kp PLUS   &kp SLASH  &kp ASTERISK     &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp N1  &kp N2          &kp N3        &kp NUMBER_4  &trans
 &trans       &kp TILDE   &kp CARET  &kp PIPE   &kp AMPERSAND    &kp SPACE           &bspc_del          &kp N9  &comma_lpar_lt  &dot_rpar_gt  &kp NUMBER_0  &trans
-                                    &trans     &trans           &thumb_mt LSHFT LS(R)              &trans             &trans  &trans
+                                    &trans     &trans           &trans              &trans             &trans  &trans
             >;
         };
 
@@ -288,7 +308,7 @@
 &to 0           &to 1         &to 2         &to 3         &none           &none              &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
 &none           &out OUT_BLE  &out OUT_USB  &none         &rgb_ug RGB_ON  &rgb_ug RGB_OFF    &none   &kp F1  &kp F2   &kp F3   &kp F4   &none
 &bt BT_CLR_ALL  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1    &bt BT_SEL 0       &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
-                                            &trans        &trans          &thumb_mt LEFT_ALT LA(R)             &trans  &trans  &trans
+                                            &trans        &trans          &trans             &trans  &trans  &trans
             >;
 
             label = "F-Keys_BT";
