@@ -165,6 +165,24 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
         };
+
+        lpar_lt: lpar_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LPAR_LT";
+            bindings = <&kp LPAR>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rpar_gt: rpar_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RPAR_GT";
+            bindings = <&kp RPAR>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -319,8 +337,8 @@
             label = "Nums_Syms";
             bindings = <
 &kp GRAVE      &kp DOLLAR  &kp HASH   &kp AT     &kp EXCLAMATION  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N5  &kp N6          &kp N7        &kp N8        &trans
-&kp PERCENT    &kp MINUS   &kp PLUS   &kp SLASH  &kp ASTERISK     &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp N1  &kp N2          &kp N3        &kp NUMBER_4  &trans
-&kp BACKSLASH  &kp TILDE   &kp CARET  &kp PIPE   &kp AMPERSAND    &kp SPACE           &bspc_del          &kp N9  &comma_lpar_lt  &dot_rpar_gt  &kp NUMBER_0  &trans
+&kp PERCENT    &kp MINUS   &kp PLUS   &kp SLASH  &kp ASTERISK     &kp LESS_THAN       &kp GREATER_THAN   &kp N1  &kp N2          &kp N3        &kp N4  &trans
+&kp BACKSLASH  &kp TILDE   &kp CARET  &kp PIPE   &kp AMPERSAND    &kp EQUAL           &bspc_del          &kp N9  &comma_lpar_lt  &dot_rpar_gt  &kp N0  &trans
                                       &trans     &trans           &trans              &trans             &trans  &trans
             >;
         };
