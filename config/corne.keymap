@@ -58,6 +58,24 @@
             flavor = "tap-preferred";
         };
 
+        comma_lpar: comma_lpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_LPAR";
+            bindings = <&kp COMMA>, <&kp LPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot_rpar: dot_rpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_RPAR";
+            bindings = <&kp PERIOD>, <&kp RPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         comma_lpar_lt: comma_lpar_lt {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_LPAR_LT";
@@ -95,24 +113,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
-
-        comma_lpar: comma_lpar {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_LPAR";
-            bindings = <&kp COMMA>, <&kp LPAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        dot_rpar: dot_rpar {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_RPAR";
-            bindings = <&kp PERIOD>, <&kp RPAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     combos {
@@ -128,9 +128,9 @@
             key-positions = <25 26 27>;
         };
 
-        spotlight {
-            bindings = <&kp LG(SPACE)>;
-            key-positions = <3 4>;
+        mission_ctrl {
+            bindings = <&mission_ctrl_macro>;
+            key-positions = <1 2>;
             layers = <4>;
         };
 
@@ -138,6 +138,24 @@
             bindings = <&kp LS(LG(NUMBER_4))>;
             key-positions = <2 3>;
             layers = <4>;
+        };
+
+        spotlight {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <3 4>;
+            layers = <4>;
+        };
+
+        snip_tool {
+            bindings = <&kp LS(LG(S))>;
+            key-positions = <2 3>;
+            layers = <5>;
+        };
+
+        start_menu {
+            bindings = <&kp LGUI>;
+            key-positions = <3 4>;
+            layers = <5>;
         };
 
         play_pause {
@@ -162,24 +180,6 @@
             bindings = <&kp C_VOLUME_UP>;
             key-positions = <9 10>;
             layers = <4 5>;
-        };
-
-        mission_ctrl {
-            bindings = <&mission_ctrl_macro>;
-            key-positions = <2 1>;
-            layers = <4>;
-        };
-
-        snip_tool {
-            bindings = <&kp LS(LG(S))>;
-            key-positions = <2 3>;
-            layers = <5>;
-        };
-
-        start_menu {
-            bindings = <&kp LGUI>;
-            key-positions = <3 4>;
-            layers = <5>;
         };
     };
 
@@ -228,7 +228,7 @@
 &kp ESCAPE               &kp X           &kp P           &kp D               &kp M             &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
 &mt GLOBE TAB            &my_mt LG(A) S  &kp N           &kp T               &kp H             &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
 &mt LEFT_CONTROL DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K      &my_mt LG(V) L    &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                         &mt LEFT_ALT ENTER  &thumb_mt LCMD R  &sk LSHIFT    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
+                                                         &mt LEFT_ALT ENTER  &sk LSHIFT  &thumb_mt LCMD R    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
             >;
         };
 
@@ -238,7 +238,7 @@
 &kp ESCAPE       &kp X           &kp P           &kp D               &kp M              &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
 &kp TAB          &my_mt LC(A) S  &kp N           &kp T               &kp H              &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
 &mt LWIN DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K      &my_mt LC(V) L     &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                 &mt LEFT_ALT ENTER  &thumb_mt LCTRL R  &sk LSHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
+                                                 &mt LEFT_ALT ENTER  &sk LSHIFT  &thumb_mt LCTRL R    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
             >;
         };
 
@@ -247,7 +247,7 @@
 &trans  &none  &mkp MB1        &mmv MOVE_UP    &mkp MB2              &msc SCRL_DOWN    &kp PAGE_UP    &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)  &kp LG(UP_ARROW)    &none
 &trans  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT       &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(DOWN_ARROW)  &none
 &trans  &none  &none           &none           &none                 &none             &bspc_del      &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
-                               &trans          &thumb_mt LCMD LG(R)  &trans            &trans         &trans        &trans
+                               &trans          &trans            &thumb_mt LCMD LG(R)  &trans         &trans        &trans
             >;
 
             label = "Navigate";
@@ -259,7 +259,7 @@
 &trans  &none  &mkp MB1        &mmv MOVE_UP    &mkp MB2               &msc SCRL_DOWN    &kp PAGE_UP    &kp LC(LEFT)  &kp UP_ARROW  &kp LC(RIGHT)  &kp LC(HOME)  &none
 &trans  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT        &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LC(END)   &none
 &trans  &none  &none           &none           &none                  &none             &bspc_del      &kp HOME      &none         &kp END        &none         &none
-                               &trans          &thumb_mt LCTRL LC(R)  &trans            &trans         &trans        &trans
+                               &trans          &trans            &thumb_mt LCTRL LC(R)  &trans         &trans        &trans
             >;
         };
 
