@@ -48,9 +48,9 @@
             flavor = "tap-preferred";
         };
 
-        thumb_hold_tap: thumb_hold_tap {
+        thumb_mt: thumb_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "THUMB_HOLD_TAP";
+            label = "THUMB_MT";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
@@ -113,16 +113,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
-        gui_sk: gui_sk {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GUI_SK";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-        };
     };
 
     combos {
@@ -180,7 +170,7 @@
             layers = <4>;
         };
 
-        Snip_tool {
+        snip_tool {
             bindings = <&kp LS(LG(S))>;
             key-positions = <2 3>;
             layers = <5>;
@@ -235,29 +225,29 @@
         snth_layer {
             label = "SNTH";
             bindings = <
-&kp ESCAPE               &kp X           &kp P           &kp D               &kp M                   &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
-&mt GLOBE TAB            &my_mt LG(A) S  &kp N           &kp T               &kp H                   &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
-&mt LEFT_CONTROL DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K      &my_mt LG(V) L          &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                         &mt LEFT_ALT ENTER  &thumb_hold_tap LCMD R  &sk LSHIFT    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
+&kp ESCAPE               &kp X           &kp P           &kp D               &kp M             &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
+&mt GLOBE TAB            &my_mt LG(A) S  &kp N           &kp T               &kp H             &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
+&mt LEFT_CONTROL DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K      &my_mt LG(V) L    &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
+                                                         &mt LEFT_ALT ENTER  &thumb_mt LCMD R  &sk LSHIFT    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
             >;
         };
 
         snth_layer_win {
             label = "SNTH Win";
             bindings = <
-&kp ESCAPE       &kp X           &kp P           &kp D               &kp M                    &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
-&kp TAB          &my_mt LC(A) S  &kp N           &kp T               &kp H                    &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
-&mt LWIN DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K      &my_mt LC(V) L           &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                 &mt LEFT_ALT ENTER  &thumb_hold_tap LCTRL R  &sk LSHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
+&kp ESCAPE       &kp X           &kp P           &kp D               &kp M              &kp Q         &kp Z        &kp Y               &kp O           &kp U         &kp MINUS  &kp EQUAL
+&kp TAB          &my_mt LC(A) S  &kp N           &kp T               &kp H              &kp V         &kp G        &kp C               &kp A           &kp E         &kp I      &kp SEMI
+&mt LWIN DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K      &my_mt LC(V) L     &kp J         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
+                                                 &mt LEFT_ALT ENTER  &thumb_mt LCTRL R  &sk LSHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 C_REPEAT
             >;
         };
 
         navigation_layer {
             bindings = <
-&trans  &none      &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_DOWN    &kp PAGE_UP    &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)  &kp LG(UP_ARROW)    &none
-&trans  &kp LG(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(DOWN_ARROW)  &none
-&trans  &kp LG(Z)  &kp LG(X)       &kp LG(C)       &kp LG(V)        &none             &bspc_del      &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
-                                   &trans          &trans           &trans            &trans         &trans        &trans
+&trans  &none  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_DOWN    &kp PAGE_UP    &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)  &kp LG(UP_ARROW)    &none
+&trans  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(DOWN_ARROW)  &none
+&trans  &none  &none           &none           &none            &none             &bspc_del      &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
+                               &trans          &kp LG(R)        &trans            &trans         &trans        &trans
             >;
 
             label = "Navigate";
@@ -266,10 +256,10 @@
         navigation_layer_win {
             label = "Navig Win";
             bindings = <
-&trans  &none      &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_DOWN    &kp PAGE_UP    &kp LC(LEFT)  &kp UP_ARROW  &kp LC(RIGHT)  &kp LC(HOME)  &none
-&trans  &kp LC(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LC(END)   &none
-&trans  &kp LC(Z)  &kp LC(X)       &kp LC(C)       &kp LC(V)        &none             &bspc_del      &kp HOME      &none         &kp END        &none         &none
-                                   &trans          &trans           &trans            &trans         &trans        &trans
+&trans  &none  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc SCRL_DOWN    &kp PAGE_UP    &kp LC(LEFT)  &kp UP_ARROW  &kp LC(RIGHT)  &kp LC(HOME)  &none
+&trans  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LC(END)   &none
+&trans  &none  &none           &none           &none            &none             &bspc_del      &kp HOME      &none         &kp END        &none         &none
+                               &trans          &kp LC(R)        &trans            &trans         &trans        &trans
             >;
         };
 
