@@ -193,8 +193,8 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp O>;
-            dead-keys = <APOS>;
-            akt_qto_go { trigger-keys = <APOS>; max-prior-idle-ms = <300>; bindings = <&kp G &kp O>; };
+            //dead-keys = <APOS>;
+            akt_qto_go { trigger-keys = <APOS>; max-prior-idle-ms = <300>; bindings = <&kp BACKSPACE &kp G &kp O>; };
         };
 
         ak_a: ak_a {
