@@ -212,7 +212,7 @@
         ak_a_w: ak_a_w {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            qqbindings = <&hmr RCTRL A>;
+            bindings = <&hmr RCTRL A>;
             akt_qta_ga { trigger-keys = <APOS>; max-prior-idle-ms = <300>; bindings = <&kp BACKSPACE &kp G &kp A>; };
         };
 
