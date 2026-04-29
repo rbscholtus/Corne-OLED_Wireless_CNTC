@@ -169,6 +169,19 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        shift-repeat: shift-repeat {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>;
+
+            repeat {
+                trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
+                bindings = <&key_repeat>;
+                max-prior-idle-ms = <350>;
+                strict-modifiers;
+            };
+        };
     };
 
     combos {
@@ -261,7 +274,7 @@
 &kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y             &kp O           &kp U         &kp BACKSLASH  &kp MINUS
 &mt GLOBE TAB        &hml LCTRL S    &hml LALT N     &hml LGUI T     &hml LSHFT H    &kp V      &kp G        &hmr RSHFT C      &hmr RGUI A     &hmr RALT E   &hmr RCTRL I   &kp SEMI
 &my_mt LG(A) DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K  &my_mt LG(V) L  &kp J      &bspc_del    &kp W             &comma_lpar_lt  &dot_rpar_gt  &kp FSLH       &kp EQUAL
-                                                     &kp ENTER       &sk LSHIFT      &lt 6 R    &lt 4 SPACE  &kp SINGLE_QUOTE  &key_repeat
+                                                     &kp ENTER       &shift-repeat      &lt 6 R    &lt 4 SPACE  &kp SINGLE_QUOTE  &key_repeat
             >;
 
             label = "SNTH";
@@ -272,7 +285,7 @@
 &kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y             &kp O           &kp U         &kp BACKSLASH  &kp MINUS
 &kp TAB              &hml LGUI S     &hml LALT N     &hml LCTRL T    &hml LSHFT H    &kp V      &kp G        &hmr RSHIFT C     &hmr RCTRL A    &hmr RALT E   &hmr RGUI I    &kp SEMI
 &my_mt LC(A) DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K  &my_mt LC(V) L  &kp J      &bspc_del    &kp W             &comma_lpar_lt  &dot_rpar_gt  &kp FSLH       &kp EQUAL
-                                                     &kp ENTER       &sk LSHIFT      &lt 6 R    &lt 5 SPACE  &kp SINGLE_QUOTE  &key_repeat
+                                                     &kp ENTER       &shift-repeat      &lt 6 R    &lt 5 SPACE  &kp SINGLE_QUOTE  &key_repeat
             >;
 
             label = "SNTH Win";
