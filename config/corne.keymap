@@ -263,6 +263,8 @@
 &my_mt LG(A) DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K  &my_mt LG(V) L  &kp J      &bspc_del    &kp W             &comma_lpar_lt  &dot_rpar_gt  &kp FSLH       &kp EQUAL
                                                      &kp ENTER       &sk LSHIFT      &lt 6 R    &lt 4 SPACE  &kp SINGLE_QUOTE  &key_repeat
             >;
+
+            label = "SNTH";
         };
 
         snth_layer_win {
@@ -272,6 +274,8 @@
 &my_mt LC(A) DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K  &my_mt LC(V) L  &kp J      &bspc_del    &kp W             &comma_lpar_lt  &dot_rpar_gt  &kp FSLH       &kp EQUAL
                                                      &kp ENTER       &sk LSHIFT      &lt 6 R    &lt 5 SPACE  &kp SINGLE_QUOTE  &key_repeat
             >;
+
+            label = "SNTH Win";
         };
 
         focal_layer {
@@ -281,6 +285,8 @@
 &mt LCTRL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D   &kp P         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
                                                      &mt LEFT_ALT ENTER  &mt LGUI DELETE  &sk LSHIFT    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
+
+            label = "Focal";
         };
 
         focal_layer_win {
@@ -290,6 +296,8 @@
 &mt LEFT_WIN BACKSLASH  &my_mt LC(Z) Z  &my_mt LC(X) X  &my_mt LC(C) M      &my_mt LC(V) D    &kp P         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
                                                         &mt LEFT_ALT ENTER  &mt LCTRL DELETE  &sk LSHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
+
+            label = "Focal Win";
         };
 
         navigation_layer {
@@ -299,6 +307,8 @@
 &trans  &none      &none                    &none                    &none                      &none             &bspc_del      &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
                                             &trans                   &trans                     &trans            &trans         &trans        &trans
             >;
+
+            label = "Navigate";
         };
 
         navigation_layer_win {
@@ -308,6 +318,8 @@
 &trans  &none     &none                    &none                     &none                      &none             &bspc_del      &kp HOME      &none         &kp END        &none         &none
                                            &trans                    &trans                     &trans            &trans         &trans        &trans
             >;
+
+            label = "Navig Win";
         };
 
         num_sym_layer {
@@ -317,6 +329,8 @@
 &kp BACKSLASH  &kp TILDE   &kp CARET  &kp PIPE   &kp AMPERSAND    &kp EQUAL           &bspc_del          &kp N9  &comma_lpar  &dot_rpar  &kp N0  &trans
                                       &trans     &trans           &trans              &trans             &trans  &trans
             >;
+
+            label = "Num & Sym";
         };
 
         fn_settings_layer {
@@ -326,6 +340,8 @@
 &bt BT_CLR_ALL  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0       &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
                                             &trans        &trans        &trans             &trans  &trans  &trans
             >;
+
+            label = "Fn & Cfg";
         };
     };
 
