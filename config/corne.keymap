@@ -49,7 +49,6 @@
 
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-            label = "HRM_LEFT";
         };
 
         hmr: home_row_mod_right {
@@ -63,7 +62,6 @@
 
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
-            label = "HRM_RIGHT";
         };
 
         hml_mmv: home_row_mod_left_mmv {
@@ -77,12 +75,10 @@
 
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-            label = "HRM_LEFT_MMV";
         };
 
         my_mt: my_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "MY_MT";
             #binding-cells = <2>;
             bindings = <&my_kp_macro>, <&kp>;
 
@@ -92,7 +88,6 @@
 
         thumb_hold_tap: thumb_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "THUMB_HOLD_TAP";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
@@ -102,7 +97,6 @@
 
         comma_lpar_lt: comma_lpar_lt {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_LPAR_LT";
             bindings = <&my_mt LESS_THAN COMMA>, <&my_mt LESS_THAN LPAR>;
 
             #binding-cells = <0>;
@@ -112,7 +106,6 @@
 
         dot_rpar_gt: dot_rpar_gt {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_RPAR_GT";
             bindings = <&my_mt GREATER_THAN DOT>, <&my_mt GREATER_THAN RPAR>;
 
             #binding-cells = <0>;
@@ -122,7 +115,6 @@
 
         bspc_del: bspc_del {
             compatible = "zmk,behavior-mod-morph";
-            label = "BSPC_DEL";
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
@@ -131,7 +123,6 @@
 
         my_gresc: my_gresc {
             compatible = "zmk,behavior-mod-morph";
-            label = "MY_GRESC";
             bindings = <&kp ESCAPE>, <&kp GRAVE>;
 
             #binding-cells = <0>;
@@ -140,7 +131,6 @@
 
         comma_lpar: comma_lpar {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_LPAR";
             bindings = <&kp COMMA>, <&kp LPAR>;
 
             #binding-cells = <0>;
@@ -149,7 +139,6 @@
 
         dot_rpar: dot_rpar {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_RPAR";
             bindings = <&kp PERIOD>, <&kp RPAR>;
 
             #binding-cells = <0>;
@@ -158,7 +147,6 @@
 
         gui_sk: gui_sk {
             compatible = "zmk,behavior-hold-tap";
-            label = "GUI_SK";
             bindings = <&kp>, <&sk>;
 
             #binding-cells = <2>;
@@ -168,7 +156,6 @@
 
         lt_lpar: lt_lpar {
             compatible = "zmk,behavior-mod-morph";
-            label = "LT_LPAR";
             bindings = <&kp LT>, <&kp LPAR>;
 
             #binding-cells = <0>;
@@ -177,7 +164,6 @@
 
         gt_rpar: gt_rpar {
             compatible = "zmk,behavior-mod-morph";
-            label = "GT_RPAR";
             bindings = <&kp GT>, <&kp RPAR>;
 
             #binding-cells = <0>;
@@ -258,14 +244,12 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MY_KP_MACRO";
         };
 
         mission_ctrl_macro: mission_ctrl_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt GLOBE &kp H &kt GLOBE>;
-            label = "MISSION_CTRL_MACRO";
         };
     };
 
@@ -273,7 +257,6 @@
         compatible = "zmk,keymap";
 
         snth_layer {
-            label = "SNTH";
             bindings = <
 &kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y             &kp O           &kp U         &kp BACKSLASH  &kp MINUS
 &mt GLOBE TAB        &hml LCTRL S    &hml LALT N     &hml LGUI T     &hml LSHFT H    &kp V      &kp G        &hmr RSHFT C      &hmr RGUI A     &hmr RALT E   &hmr RCTRL I   &kp SEMI
@@ -283,7 +266,6 @@
         };
 
         snth_layer_win {
-            label = "SNTH Win";
             bindings = <
 &kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y             &kp O           &kp U         &kp BACKSLASH  &kp MINUS
 &kp TAB              &hml LGUI S     &hml LALT N     &hml LCTRL T    &hml LSHFT H    &kp V      &kp G        &hmr RSHIFT C     &hmr RCTRL A    &hmr RALT E   &hmr RGUI I    &kp SEMI
@@ -293,7 +275,6 @@
         };
 
         focal_layer {
-            label = "Focal";
             bindings = <
 &kp ESCAPE           &kp V           &kp L           &kp H               &kp G            &kp K         &kp Q        &kp F               &kp O           &kp U         &kp J     &kp MINUS
 &mt GLOBE TAB        &my_mt LG(A) S  &kp R           &kp N               &kp T            &kp B         &kp Y        &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
@@ -303,7 +284,6 @@
         };
 
         focal_layer_win {
-            label = "Focal Win";
             bindings = <
 &kp ESCAPE              &kp V           &kp L           &kp H               &kp G             &kp K         &kp Q        &kp F               &kp O           &kp U         &kp J     &kp MINUS
 &kp TAB                 &my_mt LC(A) S  &kp R           &kp N               &kp T             &kp B         &kp Y        &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
@@ -319,12 +299,9 @@
 &trans  &none      &none                    &none                    &none                      &none             &bspc_del      &kp LG(LEFT)  &none         &kp LG(RIGHT)  &none               &none
                                             &trans                   &trans                     &trans            &trans         &trans        &trans
             >;
-
-            label = "Navigate";
         };
 
         navigation_layer_win {
-            label = "Navig Win";
             bindings = <
 &trans  &none     &mkp MB1                 &mmv MOVE_UP              &mkp MB2                   &msc SCRL_DOWN    &kp PAGE_UP    &kp LC(LEFT)  &kp UP_ARROW  &kp LC(RIGHT)  &kp LC(HOME)  &none
 &trans  &kp LGUI  &hml_mmv LALT MOVE_LEFT  &hml_mmv LCTRL MOVE_DOWN  &hml_mmv LSHFT MOVE_RIGHT  &msc SCRL_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LC(END)   &none
@@ -334,7 +311,6 @@
         };
 
         num_sym_layer {
-            label = "Nums_Syms";
             bindings = <
 &kp GRAVE      &kp DOLLAR  &kp HASH   &kp AT     &kp EXCLAMATION  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N5  &kp N6       &kp N7     &kp N8  &trans
 &kp PERCENT    &kp MINUS   &kp PLUS   &kp SLASH  &kp ASTERISK     &lt_lpar            &gt_rpar           &kp N1  &kp N2       &kp N3     &kp N4  &trans
@@ -350,8 +326,6 @@
 &bt BT_CLR_ALL  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0       &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
                                             &trans        &trans        &trans             &trans  &trans  &trans
             >;
-
-            label = "F-Keys_BT";
         };
     };
 
