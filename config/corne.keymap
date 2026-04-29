@@ -180,29 +180,33 @@
                 max-prior-idle-ms = <300>;
                 strict-modifiers;
             };
+            repeat2 {
+                trigger-keys = <N>; 
+                bindings = <&kp G>;
+                max-prior-idle-ms = <300>;
+                strict-modifiers;
+            };
         };
 
         ak_qt: ak_qt {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp APOS>;
-            akt_aoqt_aog { trigger-keys = <A O N>; max-prior-idle-ms = <300>; bindings = <&kp G>; };
+            akt_aoqt_aog { trigger-keys = <A O>; max-prior-idle-ms = <300>; bindings = <&kp G>; };
         };
 
         ak_o: ak_o {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp O>;
-            //dead-keys = <APOS>;
             akt_qto_go { trigger-keys = <APOS>; max-prior-idle-ms = <300>; bindings = <&kp BACKSPACE &kp G &kp O>; };
         };
 
         ak_a: ak_a {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp A>;
-            //dead-keys = <APOS>;
-            akt_qta_ga { trigger-keys = <APOS>; max-prior-idle-ms = <300>; bindings = <&kp G &kp A>; };
+            bindings = <&hmr RGUI A>;
+            akt_qta_ga { trigger-keys = <APOS>; max-prior-idle-ms = <300>; bindings = <&kp BACKSPACE &kp G &kp A>; };
         };
 
         ak_w: ak_w {
@@ -301,7 +305,7 @@
         snth_layer {
             bindings = <
 &kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y             &ak_o           &kp U         &kp BACKSLASH  &kp MINUS
-&mt GLOBE TAB        &hml LCTRL S    &hml LALT N     &hml LGUI T     &hml LSHFT H    &kp V      &kp G        &hmr RSHFT C      &hmr RGUI A     &hmr RALT E   &hmr RCTRL I   &kp SEMI
+&mt GLOBE TAB        &hml LCTRL S    &hml LALT N     &hml LGUI T     &hml LSHFT H    &kp V      &kp G        &hmr RSHFT C      &ak_a     &hmr RALT E   &hmr RCTRL I   &kp SEMI
 &my_mt LG(A) DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K  &my_mt LG(V) L  &kp J      &bspc_del    &ak_w             &comma_lpar_lt  &dot_rpar_gt  &kp FSLH       &kp EQUAL
                                                      &kp ENTER       &shift_repeat      &lt 6 R    &lt 4 SPACE  &ak_qt  &key_repeat
             >;
