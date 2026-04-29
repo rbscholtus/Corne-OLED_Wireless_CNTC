@@ -85,10 +85,10 @@ When you save changes in the Keymap Editor (or push a commit manually), GitHub A
 
 ### 4. Flash the Keyboard
 
-1. Connect one half of your keyboard to your computer via USB.
+1. Connect one half of your keyboard to your computer via USB. Start with the left half.
 2. Put the **nice!nano** into bootloader mode:
    - Double-tap the hardware reset button. This button can be found under the screen protector.
    - Alternatively, if it's already running this firmware, use the bootloader combo on the left half: `DEL` + `F` + `B`.
 3. A new USB storage drive named `NICENANO` will appear on your computer.
-4. Drag and drop the corresponding `.uf2` file (e.g., `corne_left...uf2`) onto this drive. The drive will disconnect automatically once the flash is complete. Your computer will likely complain the connection is lost, this is normal.
+4. Drag and drop the corresponding `.uf2` file (e.g., `corne_left...uf2`) onto this drive. The drive will disconnect automatically once the flash is complete. Your computer will likely complain the connection is lost; this is normal.
 5. Repeat for the right-hand half if necessary. *(Note: If you only modified the `.keymap` file, you generally only need to flash the **left-hand** half).*
