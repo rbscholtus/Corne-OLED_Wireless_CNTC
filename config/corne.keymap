@@ -145,15 +145,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        gui_sk: gui_sk {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-        };
-
         lt_lpar: lt_lpar {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp LT>, <&kp LPAR>;
@@ -174,14 +165,16 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&sk LSHFT>;
+
             repeat {
-                trigger-keys = <A B C D E F G H I J K L M O P Q R S T U V W X Y Z>; 
+                trigger-keys = <A B C D E F G H I J K L M O P Q R S T U V W X Y Z>;
                 bindings = <&key_repeat>;
                 max-prior-idle-ms = <300>;
                 strict-modifiers;
             };
+
             repeat2 {
-                trigger-keys = <N>; 
+                trigger-keys = <N>;
                 bindings = <&kp G>;
                 max-prior-idle-ms = <300>;
                 strict-modifiers;
@@ -192,35 +185,68 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp APOS>;
-            akt_aoqt_aog { trigger-keys = <A O>; max-prior-idle-ms = <300>; bindings = <&kp G>; };
+
+            akt_aoqt_aog {
+                trigger-keys = <A O>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp G>;
+            };
         };
 
         ak_o: ak_o {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp O>;
-            akt_qto_go { trigger-keys = <APOS>; max-prior-idle-ms = <300>; bindings = <&kp BACKSPACE &kp G &kp O>; };
+
+            akt_qto_go {
+                trigger-keys = <APOS>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp BACKSPACE &kp G &kp O>;
+            };
         };
 
         ak_a: ak_a {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&hmr RGUI A>;
-            akt_qta_ga { trigger-keys = <APOS>; max-prior-idle-ms = <300>; bindings = <&kp BACKSPACE &kp G &kp A>; };
+
+            akt_qta_ga {
+                trigger-keys = <APOS>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp BACKSPACE &kp G &kp A>;
+            };
         };
 
         ak_a_w: ak_a_w {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&hmr RCTRL A>;
-            akt_qta_ga { trigger-keys = <APOS>; max-prior-idle-ms = <300>; bindings = <&kp BACKSPACE &kp G &kp A>; };
+
+            akt_qta_ga {
+                trigger-keys = <APOS>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp BACKSPACE &kp G &kp A>;
+            };
         };
 
         ak_w: ak_w {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp W>;
-            akt_uw_ue { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp E>; };
+
+            akt_uw_ue {
+                trigger-keys = <U>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp E>;
+            };
+        };
+
+        tilde_excl: tilde_excl {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp TILDE>, <&kp EXCL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -311,10 +337,10 @@
 
         snth_layer {
             bindings = <
-&kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y             &ak_o           &kp U         &kp BACKSLASH  &kp MINUS
-&mt GLOBE TAB        &hml LCTRL S    &hml LALT N     &hml LGUI T     &hml LSHFT H    &kp V      &kp G        &hmr RSHFT C      &ak_a     &hmr RALT E   &hmr RCTRL I   &kp SEMI
-&my_mt LG(A) DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K  &my_mt LG(V) L  &kp J      &bspc_del    &ak_w             &comma_lpar_lt  &dot_rpar_gt  &kp FSLH       &kp EQUAL
-                                                     &kp ENTER       &shift_repeat      &lt 6 R    &lt 4 SPACE  &ak_qt  &key_repeat
+&kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y         &ak_o           &kp U         &kp MINUS     &kp EQUAL
+&mt GLOBE TAB        &hml LCTRL S    &hml LALT N     &hml LGUI T     &hml LSHFT H    &kp V      &kp G        &hmr RSHFT C  &ak_a           &hmr RALT E   &hmr RCTRL I  &kp SEMI
+&my_mt LG(A) DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K  &my_mt LG(V) L  &kp J      &bspc_del    &ak_w         &comma_lpar_lt  &dot_rpar_gt  &kp FSLH      &tilde_excl
+                                                     &kp ENTER       &shift_repeat   &lt 6 R    &lt 4 SPACE  &ak_qt        &kp ENTER
             >;
 
             label = "SNTH";
@@ -322,10 +348,10 @@
 
         snth_layer_win {
             bindings = <
-&kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y             &ak_o           &kp U         &kp BACKSLASH  &kp MINUS
-&kp TAB              &hml LGUI S     &hml LALT N     &hml LCTRL T    &hml LSHFT H    &kp V      &kp G        &hmr RSHIFT C     &ak_a_w    &hmr RALT E   &hmr RGUI I    &kp SEMI
-&my_mt LC(A) DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K  &my_mt LC(V) L  &kp J      &bspc_del    &ak_w             &comma_lpar_lt  &dot_rpar_gt  &kp FSLH       &kp EQUAL
-                                                     &kp ENTER       &shift_repeat      &lt 6 R    &lt 5 SPACE  &ak_qt  &key_repeat
+&kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y          &ak_o           &kp U         &kp MINUS    &kp EQUAL
+&kp TAB              &hml LGUI S     &hml LALT N     &hml LCTRL T    &hml LSHFT H    &kp V      &kp G        &hmr RSHIFT C  &ak_a_w         &hmr RALT E   &hmr RGUI I  &kp SEMI
+&my_mt LC(A) DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K  &my_mt LC(V) L  &kp J      &bspc_del    &ak_w          &comma_lpar_lt  &dot_rpar_gt  &kp FSLH     &tilde_excl
+                                                     &kp ENTER       &shift_repeat   &lt 6 R    &lt 5 SPACE  &ak_qt         &kp ENTER
             >;
 
             label = "SNTH Win";
