@@ -2,6 +2,8 @@
 
 This repository contains custom [ZMK Firmware](https://zmk.dev/) configuration for split Corne (CRKBD) keyboards.
 
+**Author**: Barend Scholtus
+
 ## ⌨️ Hardware
 
 - **Keyboard:** Corne (Left & Right halves)
