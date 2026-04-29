@@ -14,30 +14,33 @@ This keymap is customized for advanced workflows, featuring multi-OS support, mo
 
 ### Multi-OS Support
 
-The keymap provides a dedicated base (SNTH layout), alternative (Focal), and navigation layers for both **MacOS** and **Windows**, ensuring modifier keys and OS-specific shortcuts (like Spotlight vs. Start Menu, Mission Control, etc.) work perfectly regardless of the device you are connected to.
+The keymap provides a dedicated base ([SNTH layout](https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/)), alternative ([Focal layout](https://github.com/Keyhabit/Focal-keyboard-layout/)), and navigation layers for both **MacOS** and **Windows**, ensuring modifier keys and OS-specific shortcuts (like Spotlight vs. Start Menu, Mission Control, etc.) work perfectly regardless of the device you are connected to.
 
 ### Advanced Behaviors
 
 - **Home Row Mods:** Modifiers (Ctrl, Alt, Gui, Shift) are embedded into the home row keys using custom `hold-tap` behaviors (`hml` & `hmr`) to reduce hand movement and free up a thumb key (left).
+- **Common Shortcuts:** Dedicated hold-tap keys are configured for frequently used shortcuts (e.g., Undo, Cut, Copy, Paste, such as `Ctrl-C` / `Cmd-C`).
 - **Mod-Morphs:** Specialized keys that change behavior when Shift or GUI is held. For example:
-  - `<` morphs to `(`
-  - `>` morphs to `)`
-  - `Backspace` morphs to `Delete`
-  - `Escape` morphs to `~` (Grave)
+  - `,` morphs to `(` on shift (replacing `<`)
+  - `.` morphs to `)` on shift (replacing `>`)
+  - `Backspace` morphs to `Delete` on shift
+  - `<` morphs to `(` on the symbol layer
+  - `>` morphs to `)` on the symbol layer
+- **Sticky Shift:** A dedicated thumb key utilizes ZMK's sticky key behavior (`&sk`) for Shift, letting you quickly tap to capitalize the next letter without having to hold the key down.
 - **Mouse Emulation:** Full mouse pointer control and scrolling via ZMK's pointing behaviors (`&mmv` and `&msc`) integrated into the Navigation layers.
 
 ### Layers
 
 | Layer | Name | Description |
 | :--- | :--- | :--- |
-| `0` | **[SNTH](https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/) (Mac)** | Primary base layer optimized for macOS. |
+| `0` | **SNTH (Mac)** | Primary base layer optimized for macOS. |
 | `1` | **SNTH (Win)** | Primary base layer optimized for Windows. |
-| `2` | **[FOCAL](https://github.com/Keyhabit/Focal-keyboard-layout/) (Mac)** | Alternative base layer for macOS. |
-| `3` | **FOCAL (Win)** | Alternative base layer for Windows. |
+| `2` | **Focal (Mac)** | Alternative base layer for macOS. |
+| `3` | **Focal (Win)** | Alternative base layer for Windows. |
 | `4` | **NAV (Mac)** | Navigation arrows, mouse movement, clicking, scrolling, and macOS specific nav. |
 | `5` | **NAV (Win)** | Navigation arrows, mouse movement, clicking, scrolling, and Windows specific nav. |
 | `6` | **NUM & SYM** | Numpad and symbols. |
-| `7` | **SETTINGS** | Bluetooth profile selection/clearing, F-keys, RGB toggles, and Output selection (USB/BLE). *Accessed by pressing NAV + SYM layer keys simultaneously.* |
+| `7` | **F-keys & Settings** | Bluetooth profile selection/clearing, F-keys, RGB toggles, and Output selection (USB/BLE). *Accessed by pressing NAV + SYM layer keys simultaneously.* |
 
 ### Combos
 
@@ -49,7 +52,11 @@ Several powerful combos are mapped to key chords:
 
 The **Bootloader** combo can be activated by briefly pressing the three left-most keys (DEL F B) on the bottom row of the left-hand half simultaneously, while the keyboard is disconnected.
 
----
+## 🗺️ Keymap Layout
+
+![Keymap](images/keeb.png)
+
+*(Note: The Focal layout is not shown in this image.)*
 
 ## 🛠️ How to Customize and ⚡ Flash
 
@@ -80,8 +87,8 @@ When you save changes in the Keymap Editor (or push a commit manually), GitHub A
 
 1. Connect one half of your keyboard to your computer via USB.
 2. Put the **nice!nano** into bootloader mode:
-   - Double-tap the hardware reset button.
-   - *(Alternatively, if it's already running this firmware, use the bootloader combo on the left half: `DEL` + `F` + `B`).*
+   - Double-tap the hardware reset button. This button can be found under the screen protector.
+   - Alternatively, if it's already running this firmware, use the bootloader combo on the left half: `DEL` + `F` + `B`.
 3. A new USB storage drive named `NICENANO` will appear on your computer.
 4. Drag and drop the corresponding `.uf2` file (e.g., `corne_left...uf2`) onto this drive. The drive will disconnect automatically once the flash is complete. Your computer will likely complain the connection is lost, this is normal.
 5. Repeat for the right-hand half if necessary. *(Note: If you only modified the `.keymap` file, you generally only need to flash the **left-hand** half).*
