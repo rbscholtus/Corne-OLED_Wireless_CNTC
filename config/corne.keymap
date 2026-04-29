@@ -175,7 +175,7 @@
             #binding-cells = <0>;
             bindings = <&sk LSHFT>;
             repeat {
-                trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>; 
+                trigger-keys = <A B C D E F G H I J K L M O P Q R S T U V W X Y Z>; 
                 bindings = <&key_repeat>;
                 max-prior-idle-ms = <300>;
                 strict-modifiers;
@@ -193,7 +193,7 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp O>;
-            //dead-keys = <APOS>;
+            dead-keys = <APOS>;
             akt_qto_go { trigger-keys = <APOS>; max-prior-idle-ms = <300>; bindings = <&kp G &kp O>; };
         };
 
