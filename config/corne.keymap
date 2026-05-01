@@ -357,26 +357,26 @@
             label = "SNTH Win";
         };
 
-        focal_layer {
+        qwerty_layer {
             bindings = <
-&kp ESCAPE           &kp V           &kp L           &kp H               &kp G            &kp K         &kp Q        &kp F               &kp O           &kp U         &kp J     &kp MINUS
-&mt GLOBE TAB        &my_mt LG(A) S  &kp R           &kp N               &kp T            &kp B         &kp Y        &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
-&mt LCTRL BACKSLASH  &my_mt LG(Z) Z  &my_mt LG(X) X  &my_mt LG(C) M      &my_mt LG(V) D   &kp P         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
-                                                     &mt LEFT_ALT ENTER  &mt LGUI DELETE  &sk LSHIFT    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+&kp ESCAPE           &kp Q  &kp W  &kp E               &kp R            &kp T         &kp Y        &kp U               &kp I        &kp O    &kp P     &kp MINUS
+&mt GLOBE TAB        &kp A  &kp S  &kp D               &kp F            &kp G         &kp H        &kp J               &kp K        &kp L    &kp SEMI  &kp APOS
+&mt LCTRL BACKSLASH  &kp Z  &kp X  &kp C               &kp V            &kp B         &kp N        &kp M               &kp COMMA    &kp DOT  &kp FSLH  &kp EQUAL
+                                   &mt LEFT_ALT ENTER  &mt LGUI DELETE  &sk LSHIFT    &lt 4 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
 
-            label = "Focal";
+            label = "QWERTY";
         };
 
-        focal_layer_win {
+        qwerty_layer_win {
             bindings = <
-&kp ESCAPE              &kp V           &kp L           &kp H               &kp G             &kp K         &kp Q        &kp F               &kp O           &kp U         &kp J     &kp MINUS
-&kp TAB                 &my_mt LC(A) S  &kp R           &kp N               &kp T             &kp B         &kp Y        &kp C               &kp A           &kp E         &kp I     &kp SEMICOLON
-&mt LEFT_WIN BACKSLASH  &my_mt LC(Z) Z  &my_mt LC(X) X  &my_mt LC(C) M      &my_mt LC(V) D    &kp P         &bspc_del    &kp W               &comma_lpar_lt  &dot_rpar_gt  &kp FSLH  &kp EQUAL
-                                                        &mt LEFT_ALT ENTER  &mt LCTRL DELETE  &sk LSHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
+&kp ESCAPE          &kp Q  &kp W  &kp E               &kp R             &kp T         &kp Y        &kp U               &kp I        &kp O    &kp P     &kp MINUS
+&kp TAB             &kp A  &kp S  &kp D               &kp F             &kp G         &kp H        &kp J               &kp K        &kp L    &kp SEMI  &kp SQT
+&mt LCMD BACKSLASH  &kp Z  &kp X  &kp C               &kp V             &kp B         &kp N        &kp M               &kp COMMA    &kp DOT  &kp FSLH  &kp EQUAL
+                                  &mt LEFT_ALT ENTER  &mt LCTRL DELETE  &sk LSHIFT    &lt 5 SPACE  &lt 6 SINGLE_QUOTE  &lt 7 ENTER
             >;
 
-            label = "Focal Win";
+            label = "QWERTY Win";
         };
 
         navigation_layer {
