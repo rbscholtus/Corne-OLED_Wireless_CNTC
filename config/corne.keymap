@@ -169,14 +169,14 @@
             repeat {
                 trigger-keys = <A B C D E F G H I J K L M O P Q R S T U V W X Y Z>;
                 bindings = <&key_repeat>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <400>;
                 strict-modifiers;
             };
 
             repeat2 {
                 trigger-keys = <N>;
                 bindings = <&kp G>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <400>;
                 strict-modifiers;
             };
         };
@@ -188,7 +188,7 @@
 
             akt_aoqt_aog {
                 trigger-keys = <A O>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <400>;
                 bindings = <&kp G>;
             };
         };
@@ -200,7 +200,7 @@
 
             akt_qto_go {
                 trigger-keys = <APOS>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <400>;
                 bindings = <&kp BACKSPACE &kp G &kp O>;
             };
         };
@@ -212,7 +212,7 @@
 
             akt_qta_ga {
                 trigger-keys = <APOS>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <400>;
                 bindings = <&kp BACKSPACE &kp G &kp A>;
             };
         };
@@ -224,7 +224,7 @@
 
             akt_qta_ga {
                 trigger-keys = <APOS>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <400>;
                 bindings = <&kp BACKSPACE &kp G &kp A>;
             };
         };
@@ -236,7 +236,7 @@
 
             akt_uw_ue {
                 trigger-keys = <U>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <400>;
                 bindings = <&kp E>;
             };
         };
