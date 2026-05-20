@@ -337,10 +337,10 @@
 
         snth_layer {
             bindings = <
-&kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y         &ak_o           &kp U         &kp MINUS     &kp EQUAL
-&mt GLOBE TAB        &hml LCTRL S    &hml LALT N     &hml LGUI T     &hml LSHFT H    &kp V      &kp G        &hmr RSHFT C  &ak_a           &hmr RALT E   &hmr RCTRL I  &kp SEMI
-&my_mt LG(A) DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K  &my_mt LG(V) L  &kp J      &bspc_del    &ak_w         &comma_lpar_lt  &dot_rpar_gt  &kp FSLH      &tilde_excl
-                                                     &kp ENTER       &shift_repeat   &lt 6 R    &lt 4 SPACE  &ak_qt        &kp ENTER
+&kp ESCAPE         &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y         &ak_o           &kp U         &kp MINUS     &kp EQUAL
+&mt GLOBE TAB      &my_mt LG(A) S  &hml LALT N     &hml LGUI T     &hml LSHFT H    &kp V      &kp G        &hmr RSHFT C  &ak_a           &hmr RALT E   &hmr RCTRL I  &kp SEMI
+&hml LCTRL DELETE  &my_mt LG(Z) F  &my_mt LG(X) B  &my_mt LG(C) K  &my_mt LG(V) L  &kp J      &bspc_del    &ak_w         &comma_lpar_lt  &dot_rpar_gt  &kp FSLH      &tilde_excl
+                                                   &kp ENTER       &shift_repeat   &lt 6 R    &lt 4 SPACE  &ak_qt        &kp ENTER
             >;
 
             label = "SNTH";
@@ -348,10 +348,10 @@
 
         snth_layer_win {
             bindings = <
-&kp ESCAPE           &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y          &ak_o           &kp U         &kp MINUS    &kp EQUAL
-&kp TAB              &hml LGUI S     &hml LALT N     &hml LCTRL T    &hml LSHFT H    &kp V      &kp G        &hmr RSHIFT C  &ak_a_w         &hmr RALT E   &hmr RGUI I  &kp SEMI
-&my_mt LC(A) DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K  &my_mt LC(V) L  &kp J      &bspc_del    &ak_w          &comma_lpar_lt  &dot_rpar_gt  &kp FSLH     &tilde_excl
-                                                     &kp ENTER       &shift_repeat   &lt 6 R    &lt 5 SPACE  &ak_qt         &kp ENTER
+&kp ESCAPE        &kp X           &kp P           &kp D           &kp M           &kp Q      &kp Z        &kp Y          &ak_o           &kp U         &kp MINUS    &kp EQUAL
+&kp TAB           &my_mt LC(A) S  &hml LALT N     &hml LCTRL T    &hml LSHFT H    &kp V      &kp G        &hmr RSHIFT C  &ak_a_w         &hmr RALT E   &hmr RGUI I  &kp SEMI
+&hml LCMD DELETE  &my_mt LC(Z) F  &my_mt LC(X) B  &my_mt LC(C) K  &my_mt LC(V) L  &kp J      &bspc_del    &ak_w          &comma_lpar_lt  &dot_rpar_gt  &kp FSLH     &tilde_excl
+                                                  &kp ENTER       &shift_repeat   &lt 6 R    &lt 5 SPACE  &ak_qt         &kp ENTER
             >;
 
             label = "SNTH Win";
