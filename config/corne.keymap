@@ -221,10 +221,10 @@
 
         snth_layer {
             bindings = <
-&kp ESCAPE       &kp X             &kp P             &kp D             &kp M             &kp Q                     &kp Z        &kp Y      &kp O        &kp U      &kp MINUS  &kp EQUAL
-&mt GLOBE TAB    &once_mt LG(A) S  &kp N             &kp T             &kp H             &kp V                     &kp G        &kp C      &kp A        &kp E      &kp I      &kp SEMI
-&mt LCTRL ENTER  &once_mt LG(Z) F  &once_mt LG(X) B  &once_mt LG(C) K  &once_mt LG(V) L  &kp J                     &bspc_del    &kp W      &comma_lpar  &dot_rpar  &kp FSLH   &kp BACKSLASH
-                                                     &mt LEFT_ALT DEL  &sk LSHIFT        &thumb_hold_tap LGUI R    &lt 4 SPACE  &lt 6 SQT  &lt 7 ENTER
+&kp ESCAPE     &kp X             &kp P             &kp D               &kp M                   &kp Q        &kp Z        &kp Y      &kp O        &kp U      &kp MINUS  &kp EQUAL
+&mt GLOBE TAB  &once_mt LG(A) S  &kp N             &kp T               &kp H                   &kp V        &kp G        &kp C      &kp A        &kp E      &kp I      &kp SEMI
+&mt LCTRL DEL  &once_mt LG(Z) F  &once_mt LG(X) B  &once_mt LG(C) K    &once_mt LG(V) L        &kp J        &bspc_del    &kp W      &comma_lpar  &dot_rpar  &kp FSLH   &kp BACKSLASH
+                                                   &mt LEFT_ALT ENTER  &thumb_hold_tap LCMD R  &sk LSHFT    &lt 4 SPACE  &lt 6 SQT  &lt 7 ENTER
             >;
 
             label = "SNTH";
