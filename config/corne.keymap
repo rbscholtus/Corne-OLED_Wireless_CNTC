@@ -232,10 +232,10 @@
 
         snth_layer_win {
             bindings = <
-&kp ESCAPE      &kp X             &kp P             &kp D             &kp M             &kp Q                      &kp Z        &kp Y      &kp O           &kp U         &kp MINUS  &kp EQUAL
-&kp TAB         &once_mt LC(A) S  &kp N             &kp T             &kp H             &kp V                      &kp G        &kp C      &kp A           &kp E         &kp I      &kp SEMI
-&mt LGUI ENTER  &once_mt LC(Z) F  &once_mt LC(X) B  &once_mt LC(C) K  &once_mt LC(V) L  &kp J                      &bspc_del    &kp W      &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
-                                                    &mt LALT DEL      &sk LSHIFT        &thumb_hold_tap LCTRL R    &lt 5 SPACE  &lt 6 SQT  &lt 7 ENTER
+&kp ESCAPE    &kp X             &kp P             &kp D             &kp M                    &kp Q        &kp Z        &kp Y      &kp O           &kp U         &kp MINUS  &kp EQUAL
+&kp TAB       &once_mt LC(A) S  &kp N             &kp T             &kp H                    &kp V        &kp G        &kp C      &kp A           &kp E         &kp I      &kp SEMI
+&mt LGUI DEL  &once_mt LC(Z) F  &once_mt LC(X) B  &once_mt LC(C) K  &once_mt LC(V) L         &kp J        &bspc_del    &kp W      &comma_lpar_lt  &dot_rpar_gt  &kp FSLH   &kp BSLH
+                                                  &mt LALT ENTER    &thumb_hold_tap LCTRL R  &sk LSHFT    &lt 5 SPACE  &lt 6 SQT  &lt 7 ENTER
             >;
 
             label = "SNTH Win";
