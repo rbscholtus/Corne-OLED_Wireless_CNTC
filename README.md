@@ -1,5 +1,12 @@
 # Corne Wireless ZMK Configuration
 
+> [!NOTE]
+> This is my fork of
+> [Hieupham0012/Corne-OLED_Wireless](https://github.com/Hieupham0012/Corne-OLED_Wireless),
+> the ZMK firmware config by CN Technology & Computer for their wireless Corne
+> keyboard with OLED displays. I've added my own keymap and settings, and this
+> README; the rest comes from the original.
+
 This repository contains custom [ZMK Firmware](https://zmk.dev/) configuration for split Corne (CRKBD) keyboards.
 
 **Author**: Barend Scholtus
